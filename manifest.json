@@ -1,0 +1,71 @@
+{
+  "id": "audit-tools",
+  "name": "Audit Tools",
+  "version": "1.0.0",
+  "description": "Send the audit log to your SIEM and export it as CSV or NDJSON.",
+  "author": {
+    "name": "Termix"
+  },
+  "license": "Apache-2.0",
+  "repository": "https://github.com/Termix-SSH/Plugin-Audit-Tools",
+  "docs": "https://docs.termix.site/plugins/audit-tools",
+  "category": "Access & Security",
+  "icon": "ClipboardList",
+  "features": [
+    "Forward every audit entry to an HTTP collector as it happens",
+    "Catch up on entries written while the collector or Termix was down",
+    "Export the audit log as CSV or NDJSON with the same filters as the viewer",
+    "Spreadsheet formula guard on CSV export"
+  ],
+  "env": [
+    {
+      "name": "AUDIT_LOG_FORWARD_URL",
+      "description": "Collector URL audit entries are posted to. The URL set in the plugin's settings wins over this."
+    },
+    {
+      "name": "AUDIT_LOG_FORWARD_TOKEN",
+      "description": "Bearer token sent with the entries. Only used when the URL comes from this variable."
+    }
+  ],
+  "engine": {
+    "termix": ">=26.10.3",
+    "api": "^1.5"
+  },
+  "capabilities": [
+    "audit:read",
+    "network:outbound",
+    "network:serve",
+    "kv:own",
+    "ui:surface"
+  ],
+  "locales": "locales",
+  "platforms": ["linux", "win32", "darwin"],
+  "contributes": {
+    "permissions": [
+      {
+        "name": "export",
+        "titleKey": "permissions.export.title",
+        "descriptionKey": "permissions.export.description",
+        "defaultRoles": ["admin"]
+      }
+    ],
+    "settings": {
+      "admin": [
+        {
+          "key": "url",
+          "type": "string",
+          "labelKey": "settings.admin.url.label",
+          "descriptionKey": "settings.admin.url.description",
+          "placeholderKey": "settings.admin.url.placeholder",
+          "default": ""
+        },
+        {
+          "key": "token",
+          "type": "secret",
+          "labelKey": "settings.admin.token.label",
+          "descriptionKey": "settings.admin.token.description"
+        }
+      ]
+    }
+  }
+}
