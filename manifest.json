@@ -9,6 +9,7 @@
   "license": "Apache-2.0",
   "repository": "https://github.com/Termix-SSH/Plugin-Audit-Tools",
   "docs": "https://docs.termix.site/plugins/audit-tools",
+  "video": "https://www.youtube.com/watch?v=iC2FCkYTaTA",
   "category": "Access & Security",
   "icon": "ClipboardList",
   "features": [

@@ -6,6 +6,12 @@
 
 <p>Send the audit log to your SIEM and export it as CSV or NDJSON</p>
 
+<!-- VIDEO:START -->
+
+<a href="https://www.youtube.com/watch?v=iC2FCkYTaTA"><img src="https://img.shields.io/badge/Watch_the_demo-f59145?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch the demo on YouTube" /></a>
+
+<!-- VIDEO:END -->
+
 </div>
 
 <br />
