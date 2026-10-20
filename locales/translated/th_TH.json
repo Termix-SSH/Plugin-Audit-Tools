@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Audit Tools",
+    "description": "ส่งบันทึกการตรวจสอบไปยัง SIEM ของคุณ และส่งออกเป็น CSV หรือ NDJSON"
+  },
+  "permissions": {
+    "export": {
+      "title": "ส่งออกบันทึกการตรวจสอบ",
+      "description": "ดาวน์โหลดบันทึกการตรวจสอบเป็น CSV หรือ NDJSON"
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL ของตัวรวบรวม",
+        "description": "ทุกรายการในบันทึกการตรวจสอบจะถูกส่งไปยังที่นี้ในรูปแบบ JSON บรรทัดละรายการ เว้นว่างไว้เพื่อปิดการส่งต่อ",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "โทเค็น Bearer",
+        "description": "ส่งพร้อมกับทุกรายการในหัว Authorization เป็นตัวเลือก"
+      }
+    }
+  },
+  "export": {
+    "title": "ส่งออก",
+    "csv": "ส่งออก CSV",
+    "ndjson": "ส่งออก NDJSON",
+    "error": "ไม่สามารถส่งออกบันทึกการตรวจสอบได้"
+  }
+}

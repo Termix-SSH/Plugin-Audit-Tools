@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "অডিট টুলস",
+    "description": "অডিট লগ আপনার SIEM-এ পাঠান এবং এটি CSV বা NDJSON হিসেবে রপ্তানি করুন।"
+  },
+  "permissions": {
+    "export": {
+      "title": "অডিট লগ রপ্তানি করুন",
+      "description": "অডিট লগ CSV বা NDJSON হিসেবে ডাউনলোড করুন।"
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "কালেক্টর URL",
+        "description": "প্রতিটি অডিট এন্ট্রি JSON-এর একটি লাইন হিসেবে এখানে পোস্ট করা হয়। ফরওয়ার্ডিং বন্ধ করতে খালি রাখুন।",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "বিয়ারার টোকেন",
+        "description": "অথরাইজেশন হেডারে প্রতিটি এন্ট্রির সাথে পাঠানো হয়। ঐচ্ছিক।"
+      }
+    }
+  },
+  "export": {
+    "title": "রপ্তানি",
+    "csv": "CSV রপ্তানি করুন",
+    "ndjson": "NDJSON রপ্তানি করুন",
+    "error": "অডিট লগ রপ্তানি করা যায়নি।"
+  }
+}

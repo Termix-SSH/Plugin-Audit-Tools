@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Auditriistid",
+    "description": "Saada auditilogi oma SIEM-ile ja ekspordi see CSV või NDJSON formaadis."
+  },
+  "permissions": {
+    "export": {
+      "title": "Auditilogi eksportimine",
+      "description": "Laadi auditilogi alla CSV või NDJSON formaadis."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Koguri URL",
+        "description": "Iga auditikirje postitatakse siia ühe JSON-reana. Jäta tühjaks, et edastamine välja lülitada.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer-token",
+        "description": "Saadetakse koos iga kirjega Authorization päises. Valikuline."
+      }
+    }
+  },
+  "export": {
+    "title": "Eksport",
+    "csv": "Ekspordi CSV-na",
+    "ndjson": "Ekspordi NDJSON-na",
+    "error": "Auditilogi eksportimine ei õnnestunud."
+  }
+}

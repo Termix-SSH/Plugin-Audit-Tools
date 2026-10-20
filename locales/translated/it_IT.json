@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Strumenti di audit",
+    "description": "Invia il registro di audit al tuo SIEM ed esportalo in formato CSV o NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Esporta il registro di controllo",
+      "description": "Scarica il registro di audit in formato CSV o NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL del collector",
+        "description": "Ogni voce di audit viene inviata qui come una riga JSON. Lasciare vuoto per disabilitare l'inoltro.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Token Bearer",
+        "description": "Inviato con ogni voce nell'intestazione Authorization. Opzionale."
+      }
+    }
+  },
+  "export": {
+    "title": "Esporta",
+    "csv": "Esporta CSV",
+    "ndjson": "Esporta NDJSON",
+    "error": "Impossibile esportare il registro di controllo."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Ouditinstrumente",
+    "description": "Stuur die ouditlogboek na jou SIEM en eksporteer dit as CSV of NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Eksporteer die ouditlogboek",
+      "description": "Laai die ouditlogboek af as CSV of NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Versamelaar-URL",
+        "description": "Elke ouditinskrywing word hier geplaas as een lyn JSON. Laat leeg om vorentoe stuur af te skakel.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Draer-token",
+        "description": "Word saam met elke inskrywing in die Autorisasie-opskrif gestuur. Opsioneel."
+      }
+    }
+  },
+  "export": {
+    "title": "Eksporteer",
+    "csv": "Eksporteer CSV",
+    "ndjson": "Eksporteer NDJSON",
+    "error": "Kon nie die ouditlogboek eksporteer nie."
+  }
+}

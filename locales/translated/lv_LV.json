@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Audita rīki",
+    "description": "Nosūtiet revīzijas žurnālu uz savu SIEM sistēmu un eksportējiet to kā CSV vai NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Eksportēt revīzijas žurnālu",
+      "description": "Lejupielādējiet revīzijas žurnālu CSV vai NDJSON formātā."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Vākēja URL",
+        "description": "Katrs revīzijas ieraksts tiek nosūtīts šeit kā viena JSON rinda. Atstājiet tukšu, lai izslēgtu pārsūtīšanu.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Pieslēgšanas žetons",
+        "description": "Nosūtīts kopā ar katru ierakstu autorizācijas galvenes laukā. Neobligāts."
+      }
+    }
+  },
+  "export": {
+    "title": "Eksportēt",
+    "csv": "Eksportēt CSV",
+    "ndjson": "Eksportēt NDJSON",
+    "error": "Neizdevās eksportēt revīzijas žurnālu."
+  }
+}

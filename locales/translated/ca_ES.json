@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Eines d'auditoria",
+    "description": "Envieu el registre d'auditoria al vostre SIEM i exporteu-lo com a CSV o NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Exportar el registre d'auditoria",
+      "description": "Descarregueu el registre d'auditoria com a CSV o NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL del col·lector",
+        "description": "Cada entrada d'auditoria s'envia aquí com una línia de JSON. Deixeu-ho buit per desactivar la retransmissió.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Token Bearer",
+        "description": "S'envia amb cada entrada a la capçalera Authorization. Opcional."
+      }
+    }
+  },
+  "export": {
+    "title": "Exportar",
+    "csv": "Exportar CSV",
+    "ndjson": "Exportar NDJSON",
+    "error": "No s'ha pogut exportar el registre d'auditoria."
+  }
+}

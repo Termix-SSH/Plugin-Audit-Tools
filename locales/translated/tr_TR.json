@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Denetim Araçları",
+    "description": "Denetim günlüğünü SIEM'inize gönderin ve CSV veya NDJSON olarak dışa aktarın."
+  },
+  "permissions": {
+    "export": {
+      "title": "Denetim günlüğünü dışa aktar",
+      "description": "Denetim günlüğünü CSV veya NDJSON olarak indirin."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Toplayıcı URL'si",
+        "description": "Her denetim girişi burada tek bir JSON satırı olarak gönderilir. İleri aktarmayı kapatmak için boş bırakın.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer belirteci",
+        "description": "Her girişle birlikte Authorization başlığında gönderilir. İsteğe bağlı."
+      }
+    }
+  },
+  "export": {
+    "title": "Dışa Aktar",
+    "csv": "CSV olarak dışa aktar",
+    "ndjson": "NDJSON olarak dışa aktar",
+    "error": "Denetim günlüğü dışa aktarılamadı."
+  }
+}

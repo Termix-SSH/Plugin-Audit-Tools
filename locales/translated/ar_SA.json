@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "أدوات التدقيق",
+    "description": "أرسل سجل التدقيق إلى نظام SIEM الخاص بك، أو صدّره بتنسيق CSV أو NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "تصدير سجل التدقيق",
+      "description": "حمّل سجل التدقيق بتنسيق CSV أو NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "رابط جامع البيانات",
+        "description": "يتم إرسال كل إدخال في سجل التدقيق هنا كسطر واحد بتنسيق JSON. اتركه فارغاً لإيقاف التحويل.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "رمز Bearer",
+        "description": "يُرسل مع كل إدخال في رأس Authorization. اختياري."
+      }
+    }
+  },
+  "export": {
+    "title": "تصدير",
+    "csv": "تصدير CSV",
+    "ndjson": "تصدير NDJSON",
+    "error": "تعذر تصدير سجل التدقيق."
+  }
+}

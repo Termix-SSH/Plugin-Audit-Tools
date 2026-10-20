@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Alat Audit",
+    "description": "Hantar log audit ke SIEM anda dan eksportnya sebagai CSV atau NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Eksport log audit",
+      "description": "Muat turun log audit sebagai CSV atau NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL Pengumpul",
+        "description": "Setiap entri audit dihantar ke sini sebagai satu baris JSON. Kosongkan untuk mematikan penerusan.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Token Bearer",
+        "description": "Dihantar bersama setiap entri dalam pengepala Authorization. Pilihan."
+      }
+    }
+  },
+  "export": {
+    "title": "Eksport",
+    "csv": "Eksport CSV",
+    "ndjson": "Eksport NDJSON",
+    "error": "Tidak dapat mengeksport log audit."
+  }
+}

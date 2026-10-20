@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Revisjonsverktøy",
+    "description": "Send revisjonsloggen til SIEM-løsningen din og eksporter den som CSV eller NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Eksporter revisjonsloggen",
+      "description": "Last ned revisjonsloggen som CSV eller NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Samler-URL",
+        "description": "Hver revisjonsoppføring sendes hit som én linje med JSON. La feltet være tomt for å slå av videresending.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer-token",
+        "description": "Sendes med hver oppføring i Authorization-overskriften. Valgfritt."
+      }
+    }
+  },
+  "export": {
+    "title": "Eksporter",
+    "csv": "Eksporter CSV",
+    "ndjson": "Eksporter NDJSON",
+    "error": "Kunne ikke eksportere revisjonsloggen."
+  }
+}

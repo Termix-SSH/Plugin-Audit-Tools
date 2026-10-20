@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Instrumente de audit",
+    "description": "Trimite jurnalul de audit către SIEM-ul tău și exportă-l ca CSV sau NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Exportă jurnalul de audit",
+      "description": "Descarcă jurnalul de audit în format CSV sau NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL colector",
+        "description": "Fiecare intrare de audit este postată aici ca o linie JSON. Lăsați gol pentru a dezactiva redirecționarea.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Token Bearer",
+        "description": "Trimis cu fiecare intrare în antetul Authorization. Opțional."
+      }
+    }
+  },
+  "export": {
+    "title": "Exportă",
+    "csv": "Exportă CSV",
+    "ndjson": "Exportă NDJSON",
+    "error": "Nu s-a putut exporta jurnalul de audit."
+  }
+}

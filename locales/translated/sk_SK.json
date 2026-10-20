@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Nástroje na audit",
+    "description": "Odosielajte auditný denník do vášho SIEM a exportujte ho ako CSV alebo NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Export auditného denníka",
+      "description": "Stiahnite si auditný denník ako CSV alebo NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL zberného bodu",
+        "description": "Každá položka auditu sa sem odosiela ako jeden riadok JSON. Ak chcete vypnúť presmerovanie, nechajte prázdne.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer token",
+        "description": "Odosielaný s každou položkou v hlavičke Authorization. Voliteľné."
+      }
+    }
+  },
+  "export": {
+    "title": "Export",
+    "csv": "Exportovať CSV",
+    "ndjson": "Exportovať NDJSON",
+    "error": "Nepodarilo sa exportovať auditný záznam."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Outils d'audit",
+    "description": "Envoyez le journal d'audit à votre SIEM et exportez-le au format CSV ou NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Exporter le journal d'audit",
+      "description": "Téléchargez le journal d'audit au format CSV ou NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL du collecteur",
+        "description": "Chaque entrée d'audit est envoyée ici sous forme d'une ligne JSON. Laissez vide pour désactiver la transmission.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Jeton Bearer",
+        "description": "Envoyé avec chaque entrée dans l'en-tête Authorization. Optionnel."
+      }
+    }
+  },
+  "export": {
+    "title": "Exporter",
+    "csv": "Exporter en CSV",
+    "ndjson": "Exporter en NDJSON",
+    "error": "Impossible d'exporter le journal d'audit."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Audit Tools",
+    "description": "Gửi nhật ký kiểm toán đến SIEM của bạn và xuất nó dưới dạng CSV hoặc NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Xuất nhật ký kiểm toán",
+      "description": "Tải xuống nhật ký kiểm toán dưới dạng CSV hoặc NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL bộ thu thập",
+        "description": "Mỗi mục kiểm toán được gửi đến đây dưới dạng một dòng JSON. Để trống để tắt tính năng chuyển tiếp.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Token Bearer",
+        "description": "Được gửi kèm với mỗi mục trong tiêu đề Authorization. Tùy chọn."
+      }
+    }
+  },
+  "export": {
+    "title": "Xuất",
+    "csv": "Xuất CSV",
+    "ndjson": "Xuất NDJSON",
+    "error": "Không thể xuất nhật ký kiểm toán."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "plugin.name": "596029405d53",
+  "plugin.description": "c899aed1ba95",
+  "permissions.export.title": "160fc15da749",
+  "permissions.export.description": "6705947ef3a7",
+  "settings.admin.url.label": "1d6a39a75b2a",
+  "settings.admin.url.description": "77b6182e3747",
+  "settings.admin.url.placeholder": "8fda046c990e",
+  "settings.admin.token.label": "ffa64bcf396f",
+  "settings.admin.token.description": "bc305371763b",
+  "export.title": "f3e4fadb9e37",
+  "export.csv": "5755f9ac0aa1",
+  "export.ndjson": "fc1a37db956c",
+  "export.error": "a8d5794683c0"
+}

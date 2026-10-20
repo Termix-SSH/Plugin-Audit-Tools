@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "稽核工具",
+    "description": "將稽核日誌傳送至您的 SIEM，並匯出為 CSV 或 NDJSON 格式。"
+  },
+  "permissions": {
+    "export": {
+      "title": "匯出稽核日誌",
+      "description": "將稽核日誌下載為 CSV 或 NDJSON 格式。"
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "收集器 URL",
+        "description": "每筆稽核記錄都會以單行 JSON 格式發布至此。留空即可停用轉發功能。",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer 權杖",
+        "description": "會隨每筆記錄透過 Authorization 標頭傳送。此為選填。"
+      }
+    }
+  },
+  "export": {
+    "title": "匯出",
+    "csv": "匯出 CSV",
+    "ndjson": "匯出 NDJSON",
+    "error": "無法匯出稽核日誌。"
+  }
+}

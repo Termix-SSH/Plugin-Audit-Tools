@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Granskningsverktyg",
+    "description": "Skicka granskningsloggen till ditt SIEM och exportera den som CSV eller NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Exportera granskningsloggen",
+      "description": "Ladda ner granskningsloggen som CSV eller NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Samlings-URL",
+        "description": "Varje post i granskningsloggen skickas hit som en rad JSON. Lämna tomt för att stänga av vidarebefordran.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bärartoken",
+        "description": "Skickas med varje post i Authorization-huvudet. Valfritt."
+      }
+    }
+  },
+  "export": {
+    "title": "Exportera",
+    "csv": "Exportera CSV",
+    "ndjson": "Exportera NDJSON",
+    "error": "Kunde inte exportera granskningsloggen."
+  }
+}

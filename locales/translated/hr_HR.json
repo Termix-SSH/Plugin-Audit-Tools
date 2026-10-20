@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Alati za reviziju",
+    "description": "Pošaljite dnevnik revizije u svoj SIEM sustav i izvezite ga kao CSV ili NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Izvoz dnevnika revizije",
+      "description": "Preuzmite dnevnik revizije kao CSV ili NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL prikupljača",
+        "description": "Svaki unos iz dnevnika revizije šalje se ovdje kao jedan redak JSON-a. Ostavite prazno za isključivanje proslijeđivanja.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer token",
+        "description": "Šalje se uz svaki unos u zaglavlju Authorization. Opcionalno."
+      }
+    }
+  },
+  "export": {
+    "title": "Izvoz",
+    "csv": "Izvoz CSV-a",
+    "ndjson": "Izvoz NDJSON-a",
+    "error": "Izvoz dnevnika revizije nije uspio."
+  }
+}

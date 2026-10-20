@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Audit-værktøjer",
+    "description": "Send auditloggen til din SIEM og eksporter den som CSV eller NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Eksporter auditloggen",
+      "description": "Download auditloggen som CSV eller NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Samler-URL",
+        "description": "Hver auditpost sendes her som én linje JSON. Lad feltet være tomt for at deaktivere videresendelse.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer-token",
+        "description": "Sendes med hver post i Authorization-headers. Valgfrit."
+      }
+    }
+  },
+  "export": {
+    "title": "Eksportér",
+    "csv": "Eksportér CSV",
+    "ndjson": "Eksportér NDJSON",
+    "error": "Kunne ikke eksportere auditloggen."
+  }
+}

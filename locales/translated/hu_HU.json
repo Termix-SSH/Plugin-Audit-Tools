@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Audit eszközök",
+    "description": "Küldje az ellenőrzési naplót a SIEM-rendszerébe, és exportálja CSV vagy NDJSON formátumban."
+  },
+  "permissions": {
+    "export": {
+      "title": "Audit napló exportálása",
+      "description": "Töltse le az ellenőrzési naplót CSV vagy NDJSON formátumban."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Gyűjtő URL",
+        "description": "Minden ellenőrzési bejegyzés ide kerül JSON formátumban, soronként egy bejegyzés. Hagyja üresen a továbbítási funkció letiltásához.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer token",
+        "description": "Minden bejegyzéssel együtt kerül elküldésre az Authorization fejlécben. Opcionális."
+      }
+    }
+  },
+  "export": {
+    "title": "Exportálás",
+    "csv": "CSV exportálása",
+    "ndjson": "NDJSON exportálása",
+    "error": "Az ellenőrzési napló nem exportálható."
+  }
+}

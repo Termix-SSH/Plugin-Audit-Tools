@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "כלי ביקורת",
+    "description": "שלח את יומן הרישום לבדיקה (audit log) ל-SIEM שלך וייצא אותו כ-CSV או NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "ייצוא יומן ביקורת",
+      "description": "הורד את יומן הביקורת כקובץ CSV או NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "כתובת איסוף נתונים",
+        "description": "כל כניסה ביומן הביקורת נשלחת לכאן כשורה אחת של JSON. השאר ריק כדי לבטל את השידור.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "אסימון Bearer",
+        "description": "נשלח עם כל כניסה בכותרת Authorization. אופציונלי."
+      }
+    }
+  },
+  "export": {
+    "title": "ייצוא",
+    "csv": "ייצוא CSV",
+    "ndjson": "ייצוא NDJSON",
+    "error": "לא ניתן לייצא את יומן הרישום."
+  }
+}

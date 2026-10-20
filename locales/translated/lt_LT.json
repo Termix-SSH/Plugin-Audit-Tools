@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Audito įrankiai",
+    "description": "Siųskite audito žurnalą į savo SIEM sistemą ir eksportuokite jį kaip CSV arba NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Eksportuoti audito žurnalą",
+      "description": "Atsisiųskite audito žurnalą CSV arba NDJSON formatu."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Rinktuvo URL",
+        "description": "Kiekviena audito įrašo eilutė siunčiama čia kaip viena JSON eilutė. Palikite tuščią, kad išjungtumėte persiuntimą.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer žetonas",
+        "description": "Siunčiama su kiekvienu įrašu „Authorization“ antraštėje. Neprivaloma."
+      }
+    }
+  },
+  "export": {
+    "title": "Eksportuoti",
+    "csv": "Eksportuoti CSV",
+    "ndjson": "Eksportuoti NDJSON",
+    "error": "Nepavyko eksportuoti audito žurnalo."
+  }
+}

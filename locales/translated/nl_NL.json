@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Audittools",
+    "description": "Stuur het auditlogboek naar uw SIEM en exporteer het als CSV of NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Auditlogboek exporteren",
+      "description": "Download het auditlogboek als CSV of NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Collector-URL",
+        "description": "Elke auditinvoer wordt hier als één regel JSON verzonden. Laat leeg om het doorsturen uit te schakelen.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearertoken",
+        "description": "Wordt met elke invoer verzonden in de Authorization-header. Optioneel."
+      }
+    }
+  },
+  "export": {
+    "title": "Exporteren",
+    "csv": "CSV exporteren",
+    "ndjson": "NDJSON exporteren",
+    "error": "Het auditlogboek kan niet worden geëxporteerd."
+  }
+}

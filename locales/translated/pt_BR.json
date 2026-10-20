@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Ferramentas de Auditoria",
+    "description": "Envie o log de auditoria para seu SIEM e exporte-o como CSV ou NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Exportar o log de auditoria",
+      "description": "Baixe o log de auditoria como CSV ou NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL do coletor",
+        "description": "Cada entrada de auditoria é enviada aqui como uma linha de JSON. Deixe vazio para desativar o encaminhamento.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Token Bearer",
+        "description": "Enviado com cada entrada no cabeçalho Authorization. Opcional."
+      }
+    }
+  },
+  "export": {
+    "title": "Exportar",
+    "csv": "Exportar CSV",
+    "ndjson": "Exportar NDJSON",
+    "error": "Não foi possível exportar o log de auditoria."
+  }
+}

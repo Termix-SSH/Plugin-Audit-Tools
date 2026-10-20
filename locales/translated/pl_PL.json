@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Narzędzia audytowe",
+    "description": "Wyślij dziennik audytu do swojego systemu SIEM i wyeksportuj go jako plik CSV lub NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Eksportuj dziennik audytu",
+      "description": "Pobierz dziennik audytu w formacie CSV lub NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL kolektora",
+        "description": "Każdy wpis z audytu jest przesyłany tutaj jako pojedynczy wiersz JSON. Zostaw puste, aby wyłączyć przesyłanie.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Token Bearer",
+        "description": "Wysyłane z każdym wpisem w nagłówku Authorization. Opcjonalne."
+      }
+    }
+  },
+  "export": {
+    "title": "Eksportuj",
+    "csv": "Eksportuj CSV",
+    "ndjson": "Eksportuj NDJSON",
+    "error": "Nie udało się wyeksportować dziennika audytu."
+  }
+}

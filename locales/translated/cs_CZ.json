@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Nástroje pro audit",
+    "description": "Odesílejte auditní protokol do vašeho SIEM systému a exportujte jej ve formátu CSV nebo NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Exportovat auditní protokol",
+      "description": "Stáhněte si auditní protokol ve formátu CSV nebo NDJSON."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "URL sběrného bodu",
+        "description": "Každá položka auditního protokolu se sem odesílá jako jeden řádek JSON. Nechte prázdné pro vypnutí přeposílání.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer token",
+        "description": "Odesílán s každou položkou v hlavičce Authorization. Volitelné."
+      }
+    }
+  },
+  "export": {
+    "title": "Export",
+    "csv": "Exportovat CSV",
+    "ndjson": "Exportovat NDJSON",
+    "error": "Auditní protokol se nepodařilo exportovat."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Audit-Tools",
+    "description": "Sende das Audit-Protokoll an dein SIEM und exportiere es als CSV oder NDJSON."
+  },
+  "permissions": {
+    "export": {
+      "title": "Audit-Protokoll exportieren",
+      "description": "Lade das Audit-Protokoll als CSV oder NDJSON herunter."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Collector-URL",
+        "description": "Jeder Audit-Eintrag wird hier als eine Zeile JSON gesendet. Leer lassen, um das Weiterleiten zu deaktivieren.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer-Token",
+        "description": "Wird mit jedem Eintrag im Authorization-Header gesendet. Optional."
+      }
+    }
+  },
+  "export": {
+    "title": "Exportieren",
+    "csv": "CSV exportieren",
+    "ndjson": "NDJSON exportieren",
+    "error": "Das Audit-Protokoll konnte nicht exportiert werden."
+  }
+}

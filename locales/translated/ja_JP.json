@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "監査ツール",
+    "description": "監査ログを SIEM に送信し、CSV または NDJSON としてエクスポートします。"
+  },
+  "permissions": {
+    "export": {
+      "title": "監査ログをエクスポート",
+      "description": "監査ログを CSV または NDJSON としてダウンロードします。"
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "コレクターのURL",
+        "description": "すべての監査エントリが JSON の1行としてここに投稿されます。転送を無効にするには空白のままにしてください。",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer トークン",
+        "description": "Authorization ヘッダーの各エントリと共に送信されます。オプションです。"
+      }
+    }
+  },
+  "export": {
+    "title": "エクスポート",
+    "csv": "CSVをエクスポート",
+    "ndjson": "NDJSONをエクスポート",
+    "error": "監査ログをエクスポートできませんでした。"
+  }
+}

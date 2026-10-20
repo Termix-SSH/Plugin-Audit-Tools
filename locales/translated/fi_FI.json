@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "Tarkastustyökalut",
+    "description": "Lähetä tarkastusloki SIEM-järjestelmään ja vie se CSV- tai NDJSON-muodossa."
+  },
+  "permissions": {
+    "export": {
+      "title": "Vie tarkastusloki",
+      "description": "Lataa tarkastusloki CSV- tai NDJSON-muodossa."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "Kerääjän URL-osoite",
+        "description": "Jokainen tarkastuslokimerkintä lähetetään tähän osoitteeseen JSON-rivinä. Jätä tyhjäksi, jos et halua käyttää eteenpäinlähetyttä.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer-token",
+        "description": "Lähetetään jokaisen merkinnän mukana Authorization-otsakkeessa. Valinnainen."
+      }
+    }
+  },
+  "export": {
+    "title": "Vie",
+    "csv": "Vie CSV",
+    "ndjson": "Vie NDJSON",
+    "error": "Tarkastuslokia ei voitu viedä."
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "감사 도구",
+    "description": "감사 로그를 SIEM으로 전송하고 CSV 또는 NDJSON 형식으로 내보냅니다."
+  },
+  "permissions": {
+    "export": {
+      "title": "감사 로그 내보내기",
+      "description": "감사 로그를 CSV 또는 NDJSON 형식으로 다운로드합니다."
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "수집기 URL",
+        "description": "각 감사 항목은 JSON 한 줄로 여기에 게시됩니다. 전달을 끄려면 비워 둡니다.",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer 토큰",
+        "description": "Authorization 헤더의 각 항목과 함께 전송됩니다. 선택 사항입니다."
+      }
+    }
+  },
+  "export": {
+    "title": "내보내기",
+    "csv": "CSV 내보내기",
+    "ndjson": "NDJSON 내보내기",
+    "error": "감사 로그를 내보낼 수 없습니다."
+  }
+}

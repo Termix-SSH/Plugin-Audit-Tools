@@ -1,0 +1,31 @@
+{
+  "plugin": {
+    "name": "ऑडिट टूल्स",
+    "description": "ऑडिट लॉग को अपने SIEM पर भेजें और इसे CSV या NDJSON के रूप में निर्यात करें।"
+  },
+  "permissions": {
+    "export": {
+      "title": "ऑडिट लॉग निर्यात करें",
+      "description": "ऑडिट लॉग को CSV या NDJSON के रूप में डाउनलोड करें।"
+    }
+  },
+  "settings": {
+    "admin": {
+      "url": {
+        "label": "कलेक्टर URL",
+        "description": "हर ऑडिट एंट्री यहाँ JSON की एक लाइन के रूप में पोस्ट की जाती है। फॉरवर्डिंग बंद करने के लिए इसे खाली छोड़ दें।",
+        "placeholder": "https://siem.example.com/ingest"
+      },
+      "token": {
+        "label": "Bearer टोकन",
+        "description": "Authorization हेडर में प्रत्येक एंट्री के साथ भेजा जाता है। वैकल्पिक।"
+      }
+    }
+  },
+  "export": {
+    "title": "निर्यात",
+    "csv": "CSV निर्यात करें",
+    "ndjson": "NDJSON निर्यात करें",
+    "error": "ऑडिट लॉग निर्यात नहीं किया जा सका।"
+  }
+}
