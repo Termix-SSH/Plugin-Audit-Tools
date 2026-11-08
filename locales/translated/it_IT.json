@@ -19,6 +19,10 @@
       "token": {
         "label": "Token Bearer",
         "description": "Inviato con ogni voce nell'intestazione Authorization. Opzionale."
+      },
+      "alertOnFailure": {
+        "label": "Avvisa quando il forwarding fallisce",
+        "description": "Invia un avviso agli amministratori quando il collector smette di accettare voci e di nuovo quando riprende a funzionare."
       }
     }
   },

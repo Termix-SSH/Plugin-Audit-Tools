@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer belirteci",
         "description": "Her girişle birlikte Authorization başlığında gönderilir. İsteğe bağlı."
+      },
+      "alertOnFailure": {
+        "label": "Yönlendirme başarısız olduğunda uyar",
+        "description": "Toplayıcı girişleri kabul etmeyi bıraktığında ve tekrar çalışmaya başladığında yöneticilere bir uyarı gönder."
       }
     }
   },

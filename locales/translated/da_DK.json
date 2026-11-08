@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer-token",
         "description": "Sendes med hver post i Authorization-headers. Valgfrit."
+      },
+      "alertOnFailure": {
+        "label": "Advar, når videresendelse mislykkes",
+        "description": "Send en advarsel til administratorer, når indsamleren stopper med at acceptere indlæg, og igen, når den fungerer."
       }
     }
   },

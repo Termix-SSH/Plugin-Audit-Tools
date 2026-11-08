@@ -19,6 +19,10 @@
       "token": {
         "label": "Token Bearer",
         "description": "Dikirim bersama setiap entri di header Authorization. Opsional."
+      },
+      "alertOnFailure": {
+        "label": "Peringatan saat forwarding gagal",
+        "description": "Kirim peringatan ke admin ketika collector berhenti menerima entri, dan lagi ketika sudah berfungsi."
       }
     }
   },

@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.0
+
+### Added
+
+- Alert admins when forwarding to the collector fails and when it recovers
+
 ## 1.0.0
 
 ### Added

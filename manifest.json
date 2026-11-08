@@ -1,7 +1,7 @@
 {
   "id": "audit-tools",
   "name": "Audit Tools",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Send the audit log to your SIEM and export it as CSV or NDJSON.",
   "author": {
     "name": "Termix"
@@ -29,15 +29,16 @@
     }
   ],
   "engine": {
-    "termix": ">=26.10.3",
-    "api": "^1.5"
+    "termix": ">=26.11.1-0",
+    "api": "^1.15"
   },
   "capabilities": [
     "audit:read",
     "network:outbound",
     "network:serve",
     "kv:own",
-    "ui:surface"
+    "ui:surface",
+    "notify:send"
   ],
   "locales": "locales",
   "platforms": ["linux", "win32", "darwin"],
@@ -65,6 +66,13 @@
           "type": "secret",
           "labelKey": "settings.admin.token.label",
           "descriptionKey": "settings.admin.token.description"
+        },
+        {
+          "key": "alertOnFailure",
+          "type": "boolean",
+          "labelKey": "settings.admin.alertOnFailure.label",
+          "descriptionKey": "settings.admin.alertOnFailure.description",
+          "default": true
         }
       ]
     }

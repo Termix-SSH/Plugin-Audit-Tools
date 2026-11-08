@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer token",
         "description": "Odosielaný s každou položkou v hlavičke Authorization. Voliteľné."
+      },
+      "alertOnFailure": {
+        "label": "Upozornenie pri zlyhaní presmerovania",
+        "description": "Odoslať upozornenie správcovi, keď zberač prestane prijímať záznamy, a znova, keď bude opäť fungovať."
       }
     }
   },

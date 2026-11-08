@@ -147,3 +147,45 @@ describe("forward", () => {
     expect(info).toHaveBeenCalledTimes(1);
   });
 });
+
+describe("failure alerts", () => {
+  const url = { url: "https://set.example.test/in" };
+  const flush = () => new Promise((r) => setTimeout(r, 0));
+
+  it("alerts admins once per outage and once on recovery", async () => {
+    let status = 503;
+    const mock = build(async () => new Response(null, { status }), url);
+    const forwarder = createForwarder(mock.ctx, {});
+
+    await forwarder.forward(entry);
+    await forwarder.forward(entry);
+    await flush();
+    expect(mock.notifications).toHaveLength(1);
+    expect(mock.notifications[0].notification).toMatchObject({
+      category: "audit-tools.forward-failed",
+      audience: "admins",
+    });
+
+    status = 200;
+    await forwarder.forward(entry);
+    await flush();
+    expect(mock.notifications).toHaveLength(2);
+    expect(mock.notifications[1].notification.category).toBe(
+      "audit-tools.forward-recovered",
+    );
+
+    await forwarder.forward(entry);
+    await flush();
+    expect(mock.notifications).toHaveLength(2);
+  });
+
+  it("stays quiet when alertOnFailure is off", async () => {
+    const mock = build(async () => new Response(null, { status: 500 }), {
+      ...url,
+      alertOnFailure: false,
+    });
+    await createForwarder(mock.ctx, {}).forward(entry);
+    await flush();
+    expect(mock.notifications).toHaveLength(0);
+  });
+});

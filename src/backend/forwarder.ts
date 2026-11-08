@@ -44,6 +44,31 @@ export function createForwarder(
 ) {
   let consecutiveFailures = 0;
   let quietened = false;
+  let alerted = false;
+
+  /** One alert per outage and one when it ends. Never throws. */
+  async function alert(
+    kind: "forward-failed" | "forward-recovered",
+    title: string,
+    body: string,
+    severity: "warning" | "info",
+  ): Promise<void> {
+    if (typeof ctx.notify?.send !== "function") return;
+    try {
+      if ((await ctx.settings.get<boolean>("alertOnFailure")) === false) return;
+      await ctx.notify.send({
+        title,
+        body,
+        severity,
+        category: `audit-tools.${kind}`,
+        audience: "admins",
+      });
+    } catch (error) {
+      ctx.log.warn(
+        `Could not send an audit forwarding alert: ${error instanceof Error ? error.message : String(error)}`,
+      );
+    }
+  }
 
   /** A collector set in settings wins over the deployment variable. */
   async function target(): Promise<ForwardTarget | null> {
@@ -60,6 +85,15 @@ export function createForwarder(
 
   function noteFailure(reason: string, action: string): void {
     consecutiveFailures++;
+    if (!alerted) {
+      alerted = true;
+      void alert(
+        "forward-failed",
+        "Audit log forwarding failed",
+        `Could not send an audit entry to the collector (${reason}).`,
+        "warning",
+      );
+    }
     if (quietened) return;
     ctx.log.warn(
       `Failed to forward audit entry (${action}): ${reason} [${consecutiveFailures} in a row]`,
@@ -78,8 +112,17 @@ export function createForwarder(
         `Audit forwarding recovered after ${consecutiveFailures} failures`,
       );
     }
+    if (alerted) {
+      void alert(
+        "forward-recovered",
+        "Audit log forwarding recovered",
+        `Delivery to the collector works again after ${consecutiveFailures} failed entries.`,
+        "info",
+      );
+    }
     consecutiveFailures = 0;
     quietened = false;
+    alerted = false;
   }
 
   /**

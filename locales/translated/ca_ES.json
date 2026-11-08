@@ -19,6 +19,10 @@
       "token": {
         "label": "Token Bearer",
         "description": "S'envia amb cada entrada a la capçalera Authorization. Opcional."
+      },
+      "alertOnFailure": {
+        "label": "Avisa quan el reenviament falli",
+        "description": "Envia una alerta als administradors quan el col·lector deixi d'acceptar entrades i de nou quan torni a funcionar."
       }
     }
   },

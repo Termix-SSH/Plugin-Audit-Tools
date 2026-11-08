@@ -19,6 +19,10 @@
       "token": {
         "label": "Token Bearer",
         "description": "Dihantar bersama setiap entri dalam pengepala Authorization. Pilihan."
+      },
+      "alertOnFailure": {
+        "label": "Amaran apabila pelayaran gagal",
+        "description": "Hantar amaran kepada pentadbir apabila pengumpul berhenti menerima entri, dan sekali lagi apabila ia berfungsi."
       }
     }
   },

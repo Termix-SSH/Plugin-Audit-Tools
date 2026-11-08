@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer žeton",
         "description": "Pošlje se z vsakim vnosom v glavi Authorization. Neobvezno."
+      },
+      "alertOnFailure": {
+        "label": "Opozori, ko posredovanje ne uspe",
+        "description": "Pošljite opozorilo skrbnikom, ko zbirnik preneha sprejemati vnose, ter znova, ko ponovno deluje."
       }
     }
   },

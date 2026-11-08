@@ -19,6 +19,10 @@
       "token": {
         "label": "Token Bearer",
         "description": "Được gửi kèm với mỗi mục trong tiêu đề Authorization. Tùy chọn."
+      },
+      "alertOnFailure": {
+        "label": "Cảnh báo khi chuyển tiếp thất bại",
+        "description": "Gửi cảnh báo cho quản trị viên khi bộ thu thập ngừng chấp nhận mục nhập, và gửi lại khi nó hoạt động trở lại."
       }
     }
   },

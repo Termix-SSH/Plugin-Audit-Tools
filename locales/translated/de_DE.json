@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer-Token",
         "description": "Wird mit jedem Eintrag im Authorization-Header gesendet. Optional."
+      },
+      "alertOnFailure": {
+        "label": "Benachrichtigung bei Forwarding-Fehlern",
+        "description": "Sende eine Benachrichtigung an Administratoren, wenn der Collector keine Einträge mehr annimmt, und erneut, wenn er wieder funktioniert."
       }
     }
   },

@@ -19,6 +19,10 @@
       "token": {
         "label": "Token Bearer",
         "description": "Wysyłane z każdym wpisem w nagłówku Authorization. Opcjonalne."
+      },
+      "alertOnFailure": {
+        "label": "Powiadom, gdy przekierowanie nie powiedzie się",
+        "description": "Wyślij powiadomienie do administratorów, gdy kolektor przestanie akceptować wpisy, a następnie ponownie, gdy zacznie działać."
       }
     }
   },

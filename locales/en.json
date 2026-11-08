@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer token",
         "description": "Sent with each entry in the Authorization header. Optional."
+      },
+      "alertOnFailure": {
+        "label": "Alert when forwarding fails",
+        "description": "Send an alert to admins when the collector stops accepting entries, and again when it works."
       }
     }
   },

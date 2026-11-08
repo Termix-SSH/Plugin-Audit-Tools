@@ -19,6 +19,10 @@
       "token": {
         "label": "Jeton Bearer",
         "description": "Envoyé avec chaque entrée dans l'en-tête Authorization. Optionnel."
+      },
+      "alertOnFailure": {
+        "label": "Alerter en cas d'échec de la redirection",
+        "description": "Envoyer une alerte aux administrateurs lorsque le collecteur cesse d'accepter les entrées, puis à nouveau lorsqu'il fonctionne."
       }
     }
   },

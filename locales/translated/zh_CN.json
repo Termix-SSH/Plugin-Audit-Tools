@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer 令牌",
         "description": "随每条记录通过 Authorization 请求头发送。可选。"
+      },
+      "alertOnFailure": {
+        "label": "转发失败时发送警报",
+        "description": "当收集器停止接收条目时向管理员发送警报，并在恢复工作时再次发送。"
       }
     }
   },

@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer token",
         "description": "Šalje se uz svaki unos u zaglavlju Authorization. Opcionalno."
+      },
+      "alertOnFailure": {
+        "label": "Upozori kada usmjeravanje ne uspije",
+        "description": "Pošalji obavijest administratorima kada kolektor prestane prihvaćati zapise, te ponovno kada ponovno počne raditi."
       }
     }
   },

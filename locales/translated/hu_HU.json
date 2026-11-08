@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer token",
         "description": "Minden bejegyzéssel együtt kerül elküldésre az Authorization fejlécben. Opcionális."
+      },
+      "alertOnFailure": {
+        "label": "Értesítés, ha az átirányítás sikertelen",
+        "description": "Küldjön értesítést az adminisztrátoroknak, amikor a gyűjtő leáll, és újra, amikor újra működik."
       }
     }
   },

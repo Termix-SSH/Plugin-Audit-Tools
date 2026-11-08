@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer-token",
         "description": "Sendes med hver oppføring i Authorization-overskriften. Valgfritt."
+      },
+      "alertOnFailure": {
+        "label": "Varsle når videresending mislykkes",
+        "description": "Send en varsling til administratorer når samleren slutter å akseptere oppføringer, og igjen når den fungerer."
       }
     }
   },

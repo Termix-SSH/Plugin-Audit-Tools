@@ -19,6 +19,10 @@
       "token": {
         "label": "Pieslēgšanas žetons",
         "description": "Nosūtīts kopā ar katru ierakstu autorizācijas galvenes laukā. Neobligāts."
+      },
+      "alertOnFailure": {
+        "label": "Brīdināt, ja pārvirzīšana neizdodas",
+        "description": "Nosūtīt brīdinājumu administratoriem, kad vācējs pārtrauc pieņemt ierakstus, un vēlreiz, kad tas atkal darbojas."
       }
     }
   },

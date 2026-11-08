@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer-token",
         "description": "Lähetetään jokaisen merkinnän mukana Authorization-otsakkeessa. Valinnainen."
+      },
+      "alertOnFailure": {
+        "label": "Ilmoita, kun välitys epäonnistuu",
+        "description": "Lähetä ilmoitus ylläpitäjille, kun kerääjä lopettaa merkintöjen vastaanottamisen, ja uudelleen, kun se toimii jälleen."
       }
     }
   },

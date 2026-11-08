@@ -8,6 +8,8 @@
   "settings.admin.url.placeholder": "8fda046c990e",
   "settings.admin.token.label": "ffa64bcf396f",
   "settings.admin.token.description": "bc305371763b",
+  "settings.admin.alertOnFailure.label": "7410f2266e2d",
+  "settings.admin.alertOnFailure.description": "90dace969846",
   "export.title": "f3e4fadb9e37",
   "export.csv": "5755f9ac0aa1",
   "export.ndjson": "fc1a37db956c",

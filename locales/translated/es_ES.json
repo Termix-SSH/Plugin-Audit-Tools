@@ -19,6 +19,10 @@
       "token": {
         "label": "Token Bearer",
         "description": "Se envía con cada entrada en el encabezado Authorization. Opcional."
+      },
+      "alertOnFailure": {
+        "label": "Avisar cuando falle el reenvío",
+        "description": "Enviar una notificación a los administradores cuando el recopilador deje de aceptar entradas y otra cuando vuelva a funcionar."
       }
     }
   },

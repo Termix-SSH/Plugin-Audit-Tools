@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer žetonas",
         "description": "Siunčiama su kiekvienu įrašu „Authorization“ antraštėje. Neprivaloma."
+      },
+      "alertOnFailure": {
+        "label": "Įspėti, kai nepavyksta nukreipti",
+        "description": "Siųsti pranešimą administratoriams, kai rinktuvas nustoja priimti įrašus, ir dar kartą, kai vėl veikia."
       }
     }
   },

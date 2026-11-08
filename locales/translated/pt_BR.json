@@ -19,6 +19,10 @@
       "token": {
         "label": "Token Bearer",
         "description": "Enviado com cada entrada no cabeçalho Authorization. Opcional."
+      },
+      "alertOnFailure": {
+        "label": "Alertar quando o encaminhamento falhar",
+        "description": "Enviar um alerta para os administradores quando o coletor parar de aceitar entradas e novamente quando voltar a funcionar."
       }
     }
   },

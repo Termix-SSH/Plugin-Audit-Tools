@@ -19,6 +19,10 @@
       "token": {
         "label": "Draer-token",
         "description": "Word saam met elke inskrywing in die Autorisasie-opskrif gestuur. Opsioneel."
+      },
+      "alertOnFailure": {
+        "label": "Waarskuwing wanneer vorentoevoering misluk",
+        "description": "Stuur 'n waarskuwing aan administrateurs wanneer die versamelaar ophou om inskrywings aanvaar, en weer wanneer dit werk."
       }
     }
   },

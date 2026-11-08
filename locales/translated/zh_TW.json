@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer 權杖",
         "description": "會隨每筆記錄透過 Authorization 標頭傳送。此為選填。"
+      },
+      "alertOnFailure": {
+        "label": "轉發失敗時發出警示",
+        "description": "當收集器停止接受項目時，向管理員發送警示；當其恢復正常運作時，再次發送警示。"
       }
     }
   },

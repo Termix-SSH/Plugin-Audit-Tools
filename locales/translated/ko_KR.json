@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer 토큰",
         "description": "Authorization 헤더의 각 항목과 함께 전송됩니다. 선택 사항입니다."
+      },
+      "alertOnFailure": {
+        "label": "포워딩 실패 시 알림",
+        "description": "컬렉터가 항목 수신을 중단하거나 다시 정상 작동할 때 관리자에게 알림을 보냅니다."
       }
     }
   },

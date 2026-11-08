@@ -19,6 +19,10 @@
       "token": {
         "label": "Bärartoken",
         "description": "Skickas med varje post i Authorization-huvudet. Valfritt."
+      },
+      "alertOnFailure": {
+        "label": "Varna när vidarebefordring misslyckas",
+        "description": "Skicka en varning till administratörer när insamlingen slutar acceptera poster, och igen när den fungerar igen."
       }
     }
   },

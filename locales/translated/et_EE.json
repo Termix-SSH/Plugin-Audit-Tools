@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearer-token",
         "description": "Saadetakse koos iga kirjega Authorization päises. Valikuline."
+      },
+      "alertOnFailure": {
+        "label": "Teavita, kui suunamine ebaõnnestub",
+        "description": "Saada halduritele teavitus, kui koguja lõpetab kirjade vastuvõtmise, ja uuesti, kui see jälle töötab."
       }
     }
   },

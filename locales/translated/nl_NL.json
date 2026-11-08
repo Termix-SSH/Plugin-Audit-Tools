@@ -19,6 +19,10 @@
       "token": {
         "label": "Bearertoken",
         "description": "Wordt met elke invoer verzonden in de Authorization-header. Optioneel."
+      },
+      "alertOnFailure": {
+        "label": "Waarschuwen bij mislukken van forwarding",
+        "description": "Stuur een waarschuwing naar beheerders wanneer de collector het accepteren van items stopt, en opnieuw wanneer het weer werkt."
       }
     }
   },
