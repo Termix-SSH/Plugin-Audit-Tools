@@ -101,5 +101,13 @@ export function activate(app: TermixApp): void {
   app.registerTab("integrity", createIntegrityTab(app), {
     titleKey: "integrity.title",
     hostless: true,
+    singleton: true,
+  });
+  app.registerPaletteEntry({
+    id: "integrity",
+    titleKey: "integrity.title",
+    keywords: ["audit", "hash", "chain", "tamper", "integrity"],
+    scope: "global",
+    run: (shell) => shell.openSingletonTab("integrity"),
   });
 }

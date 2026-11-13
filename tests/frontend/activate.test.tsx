@@ -66,3 +66,18 @@ describe(`${manifest.id} activate`, () => {
     });
   });
 });
+
+describe("palette", () => {
+  it("opens the audit log check from the palette", () => {
+    const entries: Array<{ id: string; run: (shell: unknown) => void }> = [];
+    plugin.activate({
+      registerSlotContribution: vi.fn(),
+      registerTab: vi.fn(),
+      registerPaletteEntry: (entry: never) => entries.push(entry),
+    } as never);
+    const shell = { openSingletonTab: vi.fn() };
+    expect(entries.map((e) => e.id)).toEqual(["integrity"]);
+    entries[0].run(shell);
+    expect(shell.openSingletonTab).toHaveBeenCalledWith("integrity");
+  });
+});
