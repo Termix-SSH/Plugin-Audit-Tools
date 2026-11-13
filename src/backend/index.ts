@@ -16,7 +16,7 @@ export async function activate(ctx: PluginContext) {
   ctx.audit.subscribe((entry) => {
     void relay.onEntry(entry).catch(() => {});
   });
-  ctx.schedule.every(RETRY_INTERVAL_MS, () => relay.retry());
+  ctx.schedule.every(RETRY_INTERVAL_MS, () => relay.retry(), { id: "retry" });
   // Turning forwarding on or changing the collector sends what is waiting.
   ctx.settings.onChange("url", () => void relay.start().catch(() => {}));
   ctx.disposables.add(() => relay.stop());

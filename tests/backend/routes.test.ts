@@ -64,6 +64,7 @@ const chain = {
 async function boot(permissions: string[]) {
   let router: Router | null = null;
   mock = createMockCtx({
+    sandbox: true,
     auditChain: chain,
     pluginId: manifest.id,
     manifest,

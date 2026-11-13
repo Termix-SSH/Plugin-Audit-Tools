@@ -9,6 +9,7 @@
 
 ### Changed
 
+- Runs in its own process on Termix 26.11.2 and later, with no access to the server beyond what Termix allows it
 - Needs Termix 26.11.2 or newer
 
 ## 1.1.0

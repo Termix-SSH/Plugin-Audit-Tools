@@ -33,6 +33,7 @@ function build(
   settings: Record<string, unknown> = {},
 ): MockPluginContext {
   return createMockCtx({
+    sandbox: true,
     pluginId: manifest.id,
     manifest,
     capabilities: manifest.capabilities,

@@ -32,7 +32,7 @@
   ],
   "engine": {
     "termix": ">=26.11.2-0",
-    "api": "^1.15"
+    "api": "^2.0.0"
   },
   "capabilities": [
     "audit:read",
@@ -42,6 +42,14 @@
     "ui:surface",
     "notify:send"
   ],
+  "sandbox": {
+    "schedules": [
+      {
+        "id": "retry",
+        "every": 30000
+      }
+    ]
+  },
   "locales": "locales",
   "platforms": ["linux", "win32", "darwin"],
   "contributes": {
