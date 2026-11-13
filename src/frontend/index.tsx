@@ -5,6 +5,7 @@ import {
 } from "@termix-ssh/plugin-sdk/frontend";
 import { Button } from "@termix-ssh/plugin-sdk/ui";
 import { toast } from "sonner";
+import { createIntegrityTab } from "./IntegrityTab";
 
 const SLOT_ID = "audit.toolbar";
 
@@ -96,5 +97,9 @@ export function activate(app: TermixApp): void {
     titleKey: "export.title",
     kind: "component",
     component: createExportButtons(app),
+  });
+  app.registerTab("integrity", createIntegrityTab(app), {
+    titleKey: "integrity.title",
+    hostless: true,
   });
 }

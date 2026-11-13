@@ -54,11 +54,11 @@ describe("csv and ndjson", () => {
     const csv = csvHeader() + toCsvRows([entry(), entry({ id: 2 })]);
     const lines = csv.trimEnd().split("\n");
     expect(lines[0]).toBe(
-      "id,timestamp,username,userId,action,resourceType,resourceId,resourceName,success,ipAddress,userAgent,errorMessage,details",
+      "id,timestamp,username,userId,action,resourceType,resourceId,resourceName,success,ipAddress,userAgent,errorMessage,details,prevHash,hash",
     );
     expect(lines).toHaveLength(3);
     expect(lines[1]).toBe(
-      "1,2026-10-18T10:00:00.000Z,root,u1,login,user,,,true,10.0.0.1,,,",
+      "1,2026-10-18T10:00:00.000Z,root,u1,login,user,,,true,10.0.0.1,,,,,",
     );
   });
 

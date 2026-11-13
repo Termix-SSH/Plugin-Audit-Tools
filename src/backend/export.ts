@@ -15,6 +15,8 @@ const COLUMNS = [
   "userAgent",
   "errorMessage",
   "details",
+  "prevHash",
+  "hash",
 ] as const;
 
 /**

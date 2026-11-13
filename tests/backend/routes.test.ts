@@ -10,7 +10,7 @@ import type { PluginAuditEntry } from "@termix-ssh/plugin-sdk/backend";
 import type { PluginManifest } from "@termix-ssh/plugin-sdk/manifest";
 import manifestJson from "../../manifest.json";
 import { activate } from "../../src/backend/index.js";
-import { filtersFromQuery } from "../../src/backend/routes.js";
+import { filtersFromQuery, parseHead } from "../../src/backend/routes.js";
 
 const manifest = manifestJson as unknown as PluginManifest;
 
@@ -51,9 +51,20 @@ let mock: MockPluginContext;
 let server: http.Server;
 let port: number;
 
+const chain = {
+  ok: false,
+  checked: 4,
+  unchained: 0,
+  head: { id: 9, hash: "c".repeat(64) },
+  brokenAt: 3,
+  problem: "row_changed" as const,
+  checkedAt: "2026-11-13T00:00:00.000Z",
+};
+
 async function boot(permissions: string[]) {
   let router: Router | null = null;
   mock = createMockCtx({
+    auditChain: chain,
     pluginId: manifest.id,
     manifest,
     capabilities: manifest.capabilities,
@@ -63,6 +74,8 @@ async function boot(permissions: string[]) {
   });
   await activate(mock.ctx);
   const app = express();
+  // Core parses JSON bodies before plugin routes.
+  app.use(express.json());
   app.use((_req, _res, next) => {
     mock.setActor("admin-1");
     next();
@@ -133,5 +146,55 @@ describe("export permission", () => {
     await boot([]);
     const response = await fetch(`http://127.0.0.1:${port}/export`);
     expect(response.status).toBe(403);
+  });
+});
+
+describe("audit chain routes", () => {
+  const post = (path: string, body?: unknown) =>
+    fetch(`http://127.0.0.1:${port}${path}`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: body === undefined ? undefined : JSON.stringify(body),
+    });
+
+  it("shows the last check and runs one", async () => {
+    await boot([`${manifest.id}.export`]);
+    const last = await fetch(`http://127.0.0.1:${port}/chain`);
+    expect((await last.json()).result).toEqual(chain);
+    const now = await post("/chain/verify");
+    expect((await now.json()).result).toMatchObject({ ok: false, brokenAt: 3 });
+  });
+
+  it("compares a saved head and refuses anything else", async () => {
+    await boot([`${manifest.id}.export`]);
+    const good = await post("/chain/check-head", {
+      id: 9,
+      hash: "c".repeat(64),
+      checkedAt: "x",
+    });
+    expect(good.status).toBe(200);
+    expect((await good.json()).result).toHaveProperty("found");
+    expect(
+      (await post("/chain/check-head", { id: 9, hash: "nope" })).status,
+    ).toBe(400);
+    expect((await post("/chain/check-head", { id: "9" })).status).toBe(400);
+  });
+
+  it("needs the export permission", async () => {
+    await boot([]);
+    expect((await fetch(`http://127.0.0.1:${port}/chain`)).status).toBe(403);
+    expect((await post("/chain/verify")).status).toBe(403);
+  });
+});
+
+describe("parseHead", () => {
+  it("takes an id and a sha256 hash only", () => {
+    expect(parseHead({ id: 1, hash: "d".repeat(64), extra: true })).toEqual({
+      id: 1,
+      hash: "d".repeat(64),
+    });
+    expect(parseHead({ id: 0, hash: "d".repeat(64) })).toBeNull();
+    expect(parseHead({ id: 1.5, hash: "d".repeat(64) })).toBeNull();
+    expect(parseHead(null)).toBeNull();
   });
 });

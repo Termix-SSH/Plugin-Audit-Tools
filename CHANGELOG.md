@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.2.0
+
+### Added
+
+- Audit log check: see whether the audit log's hash chain holds, check it now, download its newest hash to keep somewhere else and paste it back later to compare
+- Forwarded entries and NDJSON and CSV exports carry each entry's chain hash, so your SIEM keeps its own copy of the head
+
+### Changed
+
+- Needs Termix 26.11.2 or newer
+
 ## 1.1.0
 
 ### Added
