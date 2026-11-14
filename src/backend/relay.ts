@@ -122,6 +122,11 @@ export function createRelay(ctx: PluginContext, forwarder: Forwarder) {
       if (behind) await catchUp();
     },
 
+    /** Entries are waiting for a collector that was down. */
+    isBehind(): boolean {
+      return behind;
+    },
+
     async stop(): Promise<void> {
       stopped = true;
       await save().catch(() => {});
