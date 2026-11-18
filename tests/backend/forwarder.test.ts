@@ -33,6 +33,7 @@ function build(
   settings: Record<string, unknown> = {},
 ): MockPluginContext {
   return createMockCtx({
+    sandbox: true,
     pluginId: manifest.id,
     manifest,
     capabilities: manifest.capabilities,
@@ -111,6 +112,18 @@ describe("forward", () => {
     const body = String(call.init?.body);
     expect(body.endsWith("\n")).toBe(true);
     expect(JSON.parse(body)).toEqual(forwardPayload(entry));
+  });
+
+  it("sends each entry's chain hash, so the collector holds the head", () => {
+    expect(
+      forwardPayload({
+        ...entry,
+        id: 7,
+        hash: "b".repeat(64),
+        prevHash: "a".repeat(64),
+      }),
+    ).toMatchObject({ id: 7, hash: "b".repeat(64), prevHash: "a".repeat(64) });
+    expect(forwardPayload(entry)).toMatchObject({ id: null, hash: null });
   });
 
   it("reports a non 2xx answer and a thrown error without throwing", async () => {

@@ -31,5 +31,29 @@
     "csv": "CSV exporteren",
     "ndjson": "NDJSON exporteren",
     "error": "Het auditlogboek kan niet worden geëxporteerd."
+  },
+  "integrity": {
+    "title": "Auditlogcontrole",
+    "intro": "Elke auditlogboekvermelding bevat een hash van de voorgaande, zodat een gewijzigde of verwijderde vermelding de keten verbroken. Termix controleert dit elk uur en waarschuwt alle beheerders bij een breuk. Download af en toe de nieuwste hash en bewaar deze op een andere locatie: later kun je deze hier plakken om te bewijzen dat niets ervoor is herschreven.",
+    "ok": "De keten is intact",
+    "broken": "De keten is verbroken bij vermelding {{id}}",
+    "never": "Nog niet gecontroleerd",
+    "head": "Nieuwste vermelding {{id}} | {{hash}}",
+    "checkNow": "Nu controleren",
+    "download": "Head downloaden",
+    "paste": "Een opgeslagen head plakken",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Vergelijken",
+    "badHead": "Dit is geen opgeslagen head. Het vereist een id en een hash.",
+    "headOk": "De opgeslagen head komt overeen en er is niets daarna gewijzigd",
+    "headPruned": "Dit item is verwijderd vanwege de grootte- of leeftijdslimiet van het logboek, dus het kan niet langer worden vergeleken",
+    "headMissing": "De opgeslagen head komt niet overeen. Het logboek is gewijzigd of herschreven",
+    "failed": "Dat is niet gelukt. Probeer het opnieuw.",
+    "problem": {
+      "row_changed": "een item is gewijzigd",
+      "row_missing": "een item is verwijderd of toegevoegd",
+      "hash_removed": "een item is zijn hash kwijtgeraakt",
+      "head_mismatch": "de nieuwste items zijn verwijderd"
+    }
   }
 }

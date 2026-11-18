@@ -31,5 +31,30 @@
     "csv": "Eksportér CSV",
     "ndjson": "Eksportér NDJSON",
     "error": "Kunne ikke eksportere auditloggen."
+  },
+  "integrity": {
+    "title": "Tjek af revisionslog",
+    "intro": "Hver post i revisionsloggen indeholder en hash af den foregående, så en ændret eller fjernet post bryder kæden. Termix tjekker dette hver time og varsler alle administratorer, hvis kæden brydes. Download den nyeste hash nu og da og gem den et andet sted: senere kan du indsætte den her for at bevise, at intet før den er blevet omskrevet.",
+    "ok": "Kæden er intakt",
+    "broken": "Kæden er brudt ved post {{id}}",
+    "never": "Ikke tjekket endnu",
+    "checked": "{{count}} post tjekket | {{unchained}} fra før kæden | tjekket {{time}}",
+    "head": "Nyeste post {{id}} | {{hash}}",
+    "checkNow": "Tjek nu",
+    "download": "Download seneste hash",
+    "paste": "Indsæt en gemt hash",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Sammenlign",
+    "badHead": "Det er ikke en gemt hash. Den skal indeholde en id og en hash.",
+    "headOk": "Den gemte hash matcher, og intet efter den er blevet ændret",
+    "headPruned": "Denne post blev fjernet på grund af loggens størrelses- eller aldersbegrænsning, så den kan ikke længere sammenlignes",
+    "headMissing": "Den gemte hash matcher ikke. Loggen er blevet ændret eller omskrevet",
+    "failed": "Det virkede ikke. Prøv igen.",
+    "problem": {
+      "row_changed": "en post blev ændret",
+      "row_missing": "en post blev fjernet eller tilføjet",
+      "hash_removed": "en post mistede sin hash",
+      "head_mismatch": "de nyeste poster blev fjernet"
+    }
   }
 }

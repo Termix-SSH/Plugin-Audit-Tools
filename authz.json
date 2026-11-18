@@ -5,6 +5,22 @@
     "GET /plugin-api/audit-tools/export": {
       "access": "user",
       "permission": "audit-tools.export"
+    },
+    "GET /plugin-api/audit-tools/chain": {
+      "access": "user",
+      "permission": "audit-tools.export"
+    },
+    "POST /plugin-api/audit-tools/chain/verify": {
+      "access": "user",
+      "permission": "audit-tools.export"
+    },
+    "POST /plugin-api/audit-tools/chain/check-head": {
+      "access": "user",
+      "permission": "audit-tools.export",
+      "body": {
+        "id": 1,
+        "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+      }
     }
   }
 }

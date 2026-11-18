@@ -31,5 +31,30 @@
     "csv": "Exportar CSV",
     "ndjson": "Exportar NDJSON",
     "error": "No s'ha pogut exportar el registre d'auditoria."
+  },
+  "integrity": {
+    "title": "Comprovació del registre d'auditoria",
+    "intro": "Cada entrada del registre d'auditoria conté una empremta de l'anterior, de manera que si es modifica o s'elimina una entrada, es trenca la cadena. Termix la comprova cada hora i avisa tots els administradors quan es trenca. Descarrega l'empremta més recent de tant en tant i guarda-la en un altre lloc: més endavant podràs enganxar-la aquí per demostrar que res no s'ha modificat abans que es reescrigués.",
+    "ok": "La cadena és intacta",
+    "broken": "La cadena està trencada a l'entrada {{id}}",
+    "never": "Encara no s'ha comprovat",
+    "checked": "s'han verificat {{count}} entrades | {{unchained}} anteriors a la cadena | verificat {{time}}",
+    "head": "Entrada més recent {{id}} | {{hash}}",
+    "checkNow": "Comprova ara",
+    "download": "Descarrega l'empremta",
+    "paste": "Enganxa una empremta guardada",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Compara",
+    "badHead": "Això no és una empremta guardada. Cal un id i una empremta.",
+    "headOk": "L'empremta guardada coincideix i res després no s'ha modificat",
+    "headPruned": "Aquesta entrada s'ha eliminat per límit de mida o edat del registre, per la qual cosa ja no es pot comparar",
+    "headMissing": "L'empremta guardada no coincideix. El registre s'ha modificat o reescrit",
+    "failed": "Això no ha funcionat. Torna-ho a provar.",
+    "problem": {
+      "row_changed": "s'ha modificat una entrada",
+      "row_missing": "s'ha eliminat o afegit una entrada",
+      "hash_removed": "una entrada ha perdut la seva empremta",
+      "head_mismatch": "s'han eliminat les entrades més recents"
+    }
   }
 }

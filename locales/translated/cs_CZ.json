@@ -31,5 +31,30 @@
     "csv": "Exportovat CSV",
     "ndjson": "Exportovat NDJSON",
     "error": "Auditní protokol se nepodařilo exportovat."
+  },
+  "integrity": {
+    "title": "Kontrola protokolu auditů",
+    "intro": "Každý záznam v protokolu auditů obsahuje hash předchozího záznamu, takže změna nebo odstranění záznamu přeruší řetězec. Termix jej kontroluje každou hodinu a upozorní všechny administrátory, pokud dojde k přerušení. Občas si stáhněte nejnovější hash a uložte jej na jiné místo: později jej můžete sem vložit, abyste prokázali, že nic před ním nebylo přepsáno.",
+    "ok": "Řetězec je v pořádku",
+    "broken": "Řetězec je přerušen u záznamu {{id}}",
+    "never": "Ještě nebylo kontrolováno",
+    "checked": "zkontrolováno {{count}} záznamů | {{unchained}} z doby před řetězcem | zkontrolováno {{time}}",
+    "head": "Nejnovější záznam {{id}} | {{hash}}",
+    "checkNow": "Zkontrolovat nyní",
+    "download": "Stáhnout hlavičku",
+    "paste": "Vložit uloženou hlavičku",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Porovnat",
+    "badHead": "Toto není uložená hlavička. Musí obsahovat id a hash.",
+    "headOk": "Uložená hlavička odpovídá a nic po ní nebylo změněno",
+    "headPruned": "Tento záznam byl odstraněn kvůli limitu velikosti nebo stáří protokolu, takže již nelze porovnat",
+    "headMissing": "Uložená hlavička neodpovídá. Protokol byl změněn nebo přepsán",
+    "failed": "To nefungovalo. Zkuste to znovu.",
+    "problem": {
+      "row_changed": "záznam byl změněn",
+      "row_missing": "záznam byl odstraněn nebo přidán",
+      "hash_removed": "záznam ztratil svůj hash",
+      "head_mismatch": "nejnovější záznamy byly odstraněny"
+    }
   }
 }

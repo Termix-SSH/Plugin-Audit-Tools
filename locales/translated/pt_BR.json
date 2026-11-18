@@ -31,5 +31,30 @@
     "csv": "Exportar CSV",
     "ndjson": "Exportar NDJSON",
     "error": "Não foi possível exportar o log de auditoria."
+  },
+  "integrity": {
+    "title": "Verificação do registro de auditoria",
+    "intro": "Cada entrada do registro de auditoria contém o hash da entrada anterior, de modo que qualquer alteração ou remoção quebra a cadeia. O Termix verifica isso a cada hora e alerta todos os administradores quando a cadeia é quebrada. Baixe o hash mais recente de tempos em tempos e guarde-o em outro local: mais tarde, você pode colá-lo aqui para provar que nada antes dele foi alterado.",
+    "ok": "A cadeia está íntegra",
+    "broken": "A cadeia está quebrada na entrada {{id}}",
+    "never": "Ainda não verificado",
+    "checked": "verificadas {{count}} entradas | {{unchained}} anteriores à cadeia | verificado em {{time}}",
+    "head": "Entrada mais recente {{id}} | {{hash}}",
+    "checkNow": "Verificar agora",
+    "download": "Baixar hash atual",
+    "paste": "Colar um hash salvo",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Comparar",
+    "badHead": "Isso não é um hash salvo. É necessário um id e um hash.",
+    "headOk": "O hash salvo corresponde e nada depois dele foi alterado",
+    "headPruned": "Essa entrada foi removida devido ao limite de tamanho ou idade do registro, portanto não pode mais ser comparada",
+    "headMissing": "O hash salvo não corresponde. O registro foi alterado ou reescrito",
+    "failed": "Isso não funcionou. Tente novamente.",
+    "problem": {
+      "row_changed": "uma entrada foi alterada",
+      "row_missing": "uma entrada foi removida ou adicionada",
+      "hash_removed": "uma entrada perdeu seu hash",
+      "head_mismatch": "as entradas mais recentes foram removidas"
+    }
   }
 }

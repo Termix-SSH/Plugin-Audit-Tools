@@ -31,5 +31,30 @@
     "csv": "Ekspordi CSV-na",
     "ndjson": "Ekspordi NDJSON-na",
     "error": "Auditilogi eksportimine ei õnnestunud."
+  },
+  "integrity": {
+    "title": "Auditlogi kontroll",
+    "intro": "Iga auditilogi kirje sisaldab eelmise kirje hashi, nii et muudetud või eemaldatud kirje katkeb ahela terviklikkuse. Termix kontrollib seda iga tund ja teavitab kõiki administraatoreid, kui ahel katkeb. Laadi uusim hash aeg-ajalt alla ja hoia seda mujal: hiljem saad selle siia kleebida, et tõestada, et midagi enne seda ei ole ümber kirjutatud.",
+    "ok": "Ahel on terviklik",
+    "broken": "Ahel on katkenud kirje {{id}} juures",
+    "never": "Pole veel kontrollitud",
+    "checked": "kontrollitud {{count}} kirjet | {{unchained}} enne ahelat | kontrollitud {{time}}",
+    "head": "Uusim kirje {{id}} | {{hash}}",
+    "checkNow": "Kontrolli kohe",
+    "download": "Laadi alla pea",
+    "paste": "Kleebi salvestatud päis",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Võrdle",
+    "badHead": "See pole salvestatud algus. Sellel peab olema id ja hash.",
+    "headOk": "Salvestatud algus ühtib ja sellele järgnevaid kirjeid ei ole muudetud.",
+    "headPruned": "See kiri eemaldati logi suuruse või vanuse piirangu tõttu, seega ei saa seda enam võrrelda.",
+    "headMissing": "Salvestatud algus ei ühti. Logi on muudetud või ümber kirjutatud.",
+    "failed": "See ei õnnestunud. Proovi uuesti.",
+    "problem": {
+      "row_changed": "kirjet muudeti",
+      "row_missing": "kirjet eemaldati või lisati",
+      "hash_removed": "kirje kaotas oma hashi",
+      "head_mismatch": "uusimad kirjed eemaldati"
+    }
   }
 }

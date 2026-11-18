@@ -31,5 +31,30 @@
     "csv": "Eksportuj CSV",
     "ndjson": "Eksportuj NDJSON",
     "error": "Nie udało się wyeksportować dziennika audytu."
+  },
+  "integrity": {
+    "title": "Sprawdzenie dziennika audytu",
+    "intro": "Każdy wpis w dzienniku audytu zawiera skrót haszujący poprzedniego wpisu, więc zmiana lub usunięcie wpisu przerywa łańcuch. Termix sprawdza go co godzinę i powiadamia wszystkich administratorów, gdy łańcuch ulegnie przerwaniu. Pobieraj najnowszy skrót od czasu do czasu i przechowuj go w innym miejscu: później możesz wkleić go tutaj, aby udowodnić, że nic przed nim nie zostało zmienione.",
+    "ok": "Łańcuch jest nienaruszony",
+    "broken": "Łańcuch jest przerwany przy wpisie {{id}}",
+    "never": "Nie sprawdzono jeszcze",
+    "checked": "Sprawdzono {{count}} wpisów | {{unchained}} z przed łańcucha | sprawdzono {{time}}",
+    "head": "Najnowszy wpis {{id}} | {{hash}}",
+    "checkNow": "Sprawdź teraz",
+    "download": "Pobierz nagłówek",
+    "paste": "Wklej zapisany nagłówek",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Porównaj",
+    "badHead": "To nie jest zapisany nagłówek. Musi zawierać identyfikator i skrót.",
+    "headOk": "Zapisany nagłówek się zgadza i nic po nim nie zostało zmienione",
+    "headPruned": "Ten wpis został usunięty ze względu na limit rozmiaru lub wieku dziennika, więc nie można go już porównać",
+    "headMissing": "Zapisany nagłówek się nie zgadza. Dziennik został zmieniony lub przepisany",
+    "failed": "To nie zadziałało. Spróbuj ponownie.",
+    "problem": {
+      "row_changed": "wpis został zmieniony",
+      "row_missing": "wpis został usunięty lub dodany",
+      "hash_removed": "wpis utracił swój skrót",
+      "head_mismatch": "najnowsze wpisy zostały usunięte"
+    }
   }
 }

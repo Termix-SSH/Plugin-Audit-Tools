@@ -31,5 +31,30 @@
     "csv": "Eksporteer CSV",
     "ndjson": "Eksporteer NDJSON",
     "error": "Kon nie die ouditlogboek eksporteer nie."
+  },
+  "integrity": {
+    "title": "Ouditlogtoets",
+    "intro": "Elke ouditloginskrywing bevat 'n hash van die vorige een, sodat 'n veranderde of verwyderde inskrywing die ketting breek. Termix toets dit elke uur en waarsku elke bestuurder wanneer dit breek. Laai die nuutste hash af en stoor dit elders: later kan jy dit hier plak om te bewys dat niks voor dit herskryf is nie.",
+    "ok": "Die ketting is ongeskonde",
+    "broken": "Die ketting is gebreek by inskrywing {{id}}",
+    "never": "Nog nie getoets nie",
+    "checked": "{{count}} inskrywings getoets | {{unchained}} van voor die ketting | getoets {{time}}",
+    "head": "Nuutste inskrywing {{id}} | {{hash}}",
+    "checkNow": "Toets nou",
+    "download": "Laai kop af",
+    "paste": "Plak 'n gestoorde kop",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Vergelyk",
+    "badHead": "Dit is nie 'n gestoorde kop nie. Dit benodig 'n id en 'n hash.",
+    "headOk": "Die gestoorde kop stem ooreen en niks daarna is verander nie",
+    "headPruned": "Daardie inskrywing is verwyder deur die log se grootte- of ouderdomslimiet, dus kan dit nie meer vergelyk word nie",
+    "headMissing": "Die gestoorde kop stem nie ooreen nie. Die log is verander of herskryf",
+    "failed": "Dit het nie gewerk nie. Probeer weer.",
+    "problem": {
+      "row_changed": "'n inskrywing is verander",
+      "row_missing": "'n inskrywing is verwyder of bygevoeg",
+      "hash_removed": "'n inskrywing het sy hash verloor",
+      "head_mismatch": "die nuutste inskrywings is verwyder"
+    }
   }
 }

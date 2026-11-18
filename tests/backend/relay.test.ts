@@ -35,6 +35,7 @@ function setup(options: {
 }) {
   const received: string[] = [];
   const mock: MockPluginContext = createMockCtx({
+    sandbox: true,
     pluginId: manifest.id,
     manifest,
     capabilities: manifest.capabilities,

@@ -31,5 +31,30 @@
     "csv": "Exportera CSV",
     "ndjson": "Exportera NDJSON",
     "error": "Kunde inte exportera granskningsloggen."
+  },
+  "integrity": {
+    "title": "Granskning av loggkontroll",
+    "intro": "Varje post i granskningsloggen innehåller en hash av den föregående, så en ändrad eller borttagen post bryter kedjan. Termix kontrollerar detta varje timme och varnar alla administratörer om kedjan bryts. Ladda ner den senaste hashen då och då och spara den på en annan plats: senare kan du klistra in den här för att bevisa att inget före den har ändrats.",
+    "ok": "Kedjan är intakt",
+    "broken": "Kedjan är bruten vid post {{id}}",
+    "never": "Inte kontrollerad ännu",
+    "checked": "{{count}} post kontrollerad | {{unchained}} från innan kedjan | kontrollerad {{time}}",
+    "head": "Senaste post {{id}} | {{hash}}",
+    "checkNow": "Kontrollera nu",
+    "download": "Ladda ner senaste hash",
+    "paste": "Klistra in en sparad hash",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Jämför",
+    "badHead": "Det är inte en sparad hash. Den behöver ett id och en hash.",
+    "headOk": "Den sparade hashen matchar och inget efter den har ändrats",
+    "headPruned": "Den posten togs bort av loggens storleks- eller åldersgräns, så den kan inte jämföras längre",
+    "headMissing": "Den sparade hashen matchar inte. Loggen har ändrats eller skrivits om",
+    "failed": "Det fungerade inte. Försök igen.",
+    "problem": {
+      "row_changed": "en post ändrades",
+      "row_missing": "en post togs bort eller lades till",
+      "hash_removed": "en post förlorade sin hash",
+      "head_mismatch": "de senaste posterna togs bort"
+    }
   }
 }

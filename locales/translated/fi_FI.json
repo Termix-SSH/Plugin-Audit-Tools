@@ -31,5 +31,30 @@
     "csv": "Vie CSV",
     "ndjson": "Vie NDJSON",
     "error": "Tarkastuslokia ei voitu viedä."
+  },
+  "integrity": {
+    "title": "Tarkistuslokin tarkistus",
+    "intro": "Jokainen tarkistuslokimerkintä sisältää edellisen merkinnän hashin, joten muutettu tai poistettu merkintä katkaisee ketjun. Termix tarkistaa ketjun tunnin välein ja ilmoittaa asiasta kaikille ylläpitäjille, jos se katkeaa. Lataa uusin hash ajoittain ja säilytä se muualla: myöhemmin voit liittää sen tähän todistaaksesi, että mitään ei ole muutettu ennen uudelleenkirjoitusta.",
+    "ok": "Ketju on ehjä",
+    "broken": "Ketju on katkennut merkinnässä {{id}}",
+    "never": "Ei vielä tarkistettu",
+    "checked": "{{count}} merkintää tarkistettu | {{unchained}} ennen ketjun alkua | tarkistettu {{time}}",
+    "head": "Uusin merkintä {{id}} | {{hash}}",
+    "checkNow": "Tarkista nyt",
+    "download": "Lataa uusin hash",
+    "paste": "Liitä tallennettu hash",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Vertaa",
+    "badHead": "Tämä ei ole tallennettu hash. Se vaatii id:n ja hashin.",
+    "headOk": "Tallennettu hash täsmää, eikä mitään sen jälkeen ole muutettu",
+    "headPruned": "Tämä merkintä on poistettu lokin kokorajan tai iän perusteella, joten sitä ei voi enää verrata",
+    "headMissing": "Tallennettu hash ei täsmää. Lokia on muutettu tai uudelleenkirjoitettu",
+    "failed": "Tämä ei onnistunut. Yritä uudelleen.",
+    "problem": {
+      "row_changed": "merkintää on muutettu",
+      "row_missing": "merkintä on poistettu tai lisätty",
+      "hash_removed": "merkinnän hash on kadonnut",
+      "head_mismatch": "uusin merkinnät on poistettu"
+    }
   }
 }

@@ -31,5 +31,30 @@
     "csv": "Izvoz CSV-a",
     "ndjson": "Izvoz NDJSON-a",
     "error": "Izvoz dnevnika revizije nije uspio."
+  },
+  "integrity": {
+    "title": "Provjera dnevnika revizije",
+    "intro": "Svaka stavka u dnevniku revizije sadrži hash prethodne stavke, pa promjena ili brisanje bilo koje stavke prekida lanac. Termix provjerava lanac na sat vremena i obavještava sve administratora kada dođe do prekida. Povremeno preuzmite najnoviji hash i čuvajte ga na sigurnom mjestu: kasnije ga možete zalijepiti ovdje kako biste dokazali da ništa prije toga nije bilo izmijenjeno.",
+    "ok": "Lanac je ispravan",
+    "broken": "Lanac je prekinut na stavci {{id}}",
+    "never": "Još nije provjereno",
+    "checked": "provjereno {{count}} stavki | {{unchained}} iz prije lanca | provjereno {{time}}",
+    "head": "Najnovija stavka {{id}} | {{hash}}",
+    "checkNow": "Provjeri sada",
+    "download": "Preuzmi vrh",
+    "paste": "Zalijepi spremljeni vrh",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Usporedi",
+    "badHead": "To nije spremljeni vrh. Treba mu id i hash.",
+    "headOk": "Spremljeni vrh se podudara i ništa nakon njega nije izmijenjeno",
+    "headPruned": "Ta stavka je uklonjena zbog ograničenja veličine ili starosti dnevnika, pa se više ne može usporediti",
+    "headMissing": "Spremljeni vrh se ne podudara. Dnevnik je izmijenjen ili prepisan",
+    "failed": "To nije uspjelo. Pokušajte ponovno.",
+    "problem": {
+      "row_changed": "stavka je izmijenjena",
+      "row_missing": "stavka je uklonjena ili dodana",
+      "hash_removed": "stavka je izgubila svoj hash",
+      "head_mismatch": "najnovije stavke su uklonjene"
+    }
   }
 }

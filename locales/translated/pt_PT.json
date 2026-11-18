@@ -31,5 +31,30 @@
     "csv": "Exportar CSV",
     "ndjson": "Exportar NDJSON",
     "error": "Não foi possível exportar o registo de auditoria."
+  },
+  "integrity": {
+    "title": "Verificação do registo de auditoria",
+    "intro": "Cada entrada do registo de auditoria contém um hash da entrada anterior, pelo que uma entrada alterada ou removida quebra a cadeia. O Termix verifica a cadeia de hora em hora e alerta todos os administradores quando esta se quebra. Faça o download do hash mais recente de vez em quando e guarde-o noutro local: mais tarde, pode colá-lo aqui para provar que nada antes dele foi reescrito.",
+    "ok": "A cadeia está íntegra",
+    "broken": "A cadeia está quebrada na entrada {{id}}",
+    "never": "Ainda não verificado",
+    "checked": "verificadas {{count}} entradas | {{unchained}} anteriores à cadeia | verificado em {{time}}",
+    "head": "Entrada mais recente {{id}} | {{hash}}",
+    "checkNow": "Verificar agora",
+    "download": "Transferir hash mais recente",
+    "paste": "Colar um hash guardado",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Comparar",
+    "badHead": "Isto não é um hash guardado. É necessário um id e um hash.",
+    "headOk": "O hash guardado corresponde e nada depois dele foi alterado",
+    "headPruned": "Essa entrada foi removida devido ao limite de tamanho ou idade do registo, pelo que já não pode ser comparada",
+    "headMissing": "O hash guardado não corresponde. O registo foi alterado ou reescrito",
+    "failed": "Isto não funcionou. Tente novamente.",
+    "problem": {
+      "row_changed": "uma entrada foi alterada",
+      "row_missing": "uma entrada foi removida ou adicionada",
+      "hash_removed": "uma entrada perdeu o seu hash",
+      "head_mismatch": "as entradas mais recentes foram removidas"
+    }
   }
 }

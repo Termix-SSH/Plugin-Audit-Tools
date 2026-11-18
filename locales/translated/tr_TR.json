@@ -31,5 +31,30 @@
     "csv": "CSV olarak dışa aktar",
     "ndjson": "NDJSON olarak dışa aktar",
     "error": "Denetim günlüğü dışa aktarılamadı."
+  },
+  "integrity": {
+    "title": "Denetim günlüğü kontrolü",
+    "intro": "Her denetim günlüğü girdisi, kendinden öncekinin karma değerini taşır; böylece değiştirilmiş veya kaldırılmış bir girdi zinciri bozar. Termix bunu her saat kontrol eder ve bozulduğunda tüm yöneticilere uyarı gönderir. En yeni karma değerini ara sıra indirip başka bir yerde saklayın: daha sonra buraya yapıştırarak, o tarihten önce hiçbir şeyin yeniden yazılmadığını kanıtlayabilirsiniz.",
+    "ok": "Zincir sağlam",
+    "broken": "Zincir {{id}} numaralı girdide kırıldı",
+    "never": "Henüz kontrol edilmedi",
+    "checked": "{{count}} girdi kontrol edildi | {{unchained}} zincirden önceki | {{time}} kontrol edildi",
+    "head": "En yeni girdi {{id}} | {{hash}}",
+    "checkNow": "Şimdi kontrol et",
+    "download": "Başlangıç noktasını indir",
+    "paste": "Kaydedilmiş başlangıç noktasını yapıştır",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Karşılaştır",
+    "badHead": "Bu kaydedilmiş bir başlangıç noktası değil. Bir kimlik ve karma değeri gerekiyor.",
+    "headOk": "Kaydedilmiş başlangıç noktası eşleşiyor ve sonrasında hiçbir değişiklik yapılmadı",
+    "headPruned": "Bu girdi, günlüğün boyut veya yaş sınırına göre kaldırıldı; artık karşılaştırılamaz",
+    "headMissing": "Kaydedilmiş başlangıç noktası eşleşmiyor. Günlük değiştirilmiş veya yeniden yazılmış",
+    "failed": "Bu işlem başarısız oldu. Tekrar deneyin.",
+    "problem": {
+      "row_changed": "bir girdi değiştirildi",
+      "row_missing": "bir girdi kaldırıldı veya eklendi",
+      "hash_removed": "bir girdinin karma değeri kayboldu",
+      "head_mismatch": "en yeni girdiler kaldırıldı"
+    }
   }
 }

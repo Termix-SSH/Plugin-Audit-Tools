@@ -31,5 +31,29 @@
     "csv": "CSV exportálása",
     "ndjson": "NDJSON exportálása",
     "error": "Az ellenőrzési napló nem exportálható."
+  },
+  "integrity": {
+    "title": "Ellenőrzési napló ellenőrzése",
+    "intro": "Minden auditnapló-bejegyzés tartalmazza az előző bejegyzés hash-értékét, így egy módosított vagy törölt bejegyzés megszakítja a láncot. A Termix óránként ellenőrzi ezt, és értesíti az összes rendszergazdát, ha a lánc megszakad. Töltsd le időnként a legfrissebb hash-értéket, és tárold el máshol: később bemásolhatod ide, hogy bizonyítsd, semmit nem írtak át azelőtt.",
+    "ok": "A lánc ép",
+    "broken": "A lánc megszakadt a(z) {{id}}. bejegyzésnél",
+    "never": "Még nem ellenőrizve",
+    "head": "Legújabb bejegyzés {{id}} | {{hash}}",
+    "checkNow": "Ellenőrzés most",
+    "download": "Fej letöltése",
+    "paste": "Illessen egy mentett fejrészt",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Összehasonlítás",
+    "badHead": "Ez nem egy mentett fej. Szüksége van egy azonosítóra és egy hash-re.",
+    "headOk": "A mentett fejléc egyezik, és utána semmi nem változott",
+    "headPruned": "Ez a bejegyzés a napló méret- vagy korlátai miatt lett törölve, így már nem hasonlítható össze",
+    "headMissing": "A mentett head nem egyezik. A naplót módosították vagy újraírták",
+    "failed": "Ez nem működött. Próbálja meg újra.",
+    "problem": {
+      "row_changed": "egy bejegyzés megváltozott",
+      "row_missing": "egy bejegyzés lett eltávolítva vagy hozzáadva",
+      "hash_removed": "egy bejegyzés elvesztette a hash értékét",
+      "head_mismatch": "a legújabb bejegyzések eltávolításra kerültek"
+    }
   }
 }

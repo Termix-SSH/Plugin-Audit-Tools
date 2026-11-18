@@ -31,5 +31,30 @@
     "csv": "Xuất CSV",
     "ndjson": "Xuất NDJSON",
     "error": "Không thể xuất nhật ký kiểm toán."
+  },
+  "integrity": {
+    "title": "Kiểm tra nhật ký kiểm toán",
+    "intro": "Mỗi mục trong nhật ký kiểm toán chứa mã băm của mục trước đó, do đó việc thay đổi hoặc xóa một mục sẽ làm đứt chuỗi. Termix kiểm tra chuỗi này mỗi giờ và cảnh báo tất cả quản trị viên khi phát hiện sự cố. Hãy tải mã băm mới nhất xuống định kỳ và lưu trữ ở nơi khác: sau này bạn có thể dán nó vào đây để chứng minh rằng nhật ký chưa bị sửa đổi trước thời điểm đó.",
+    "ok": "Chuỗi vẫn nguyên vẹn",
+    "broken": "Chuỗi bị đứt tại mục {{id}}",
+    "never": "Chưa kiểm tra",
+    "checked": "Đã kiểm tra {{count}} mục | {{unchained}} mục từ trước khi có chuỗi | kiểm tra lúc {{time}}",
+    "head": "Mục mới nhất {{id}} | {{hash}}",
+    "checkNow": "Kiểm tra ngay",
+    "download": "Tải mã băm đầu chuỗi",
+    "paste": "Dán mã băm đầu chuỗi đã lưu",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "So sánh",
+    "badHead": "Đây không phải là mã băm đầu chuỗi đã lưu. Nó cần có id và hash.",
+    "headOk": "Mã băm đầu chuỗi đã lưu khớp và không có thay đổi nào sau đó",
+    "headPruned": "Mục đó đã bị xóa do giới hạn kích thước hoặc thời gian của nhật ký, nên không thể so sánh được nữa",
+    "headMissing": "Mã băm đầu chuỗi đã lưu không khớp. Nhật ký đã bị thay đổi hoặc ghi đè",
+    "failed": "Thao tác không thành công. Vui lòng thử lại.",
+    "problem": {
+      "row_changed": "một mục đã bị thay đổi",
+      "row_missing": "một mục đã bị xóa hoặc thêm vào",
+      "hash_removed": "một mục đã mất mã băm",
+      "head_mismatch": "các mục mới nhất đã bị xóa"
+    }
   }
 }

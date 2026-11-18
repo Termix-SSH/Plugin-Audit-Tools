@@ -31,5 +31,30 @@
     "csv": "Eksportēt CSV",
     "ndjson": "Eksportēt NDJSON",
     "error": "Neizdevās eksportēt revīzijas žurnālu."
+  },
+  "integrity": {
+    "title": "Reģistrācijas žurnāla pārbaude",
+    "intro": "Katrs reģistrācijas žurnāla ieraksts satur iepriekšējā ieraksta hash vērtību, tāpēc mainīts vai dzēsts ieraksts pārtrauc ķēdi. Termix to pārbauda katru stundu un brīdina visus administratorus, ja ķēde tiek pārtraukta. Laiku pa laikam lejupielādējiet jaunāko hash vērtību un glabājiet to citur: vēlāk jūs varat to ielīmēt šeit, lai pierādītu, ka nekas pirms tās nav pārrakstīts.",
+    "ok": "Ķēde ir vesela",
+    "broken": "Ķēde ir pārtraukta pie ieraksta {{id}}",
+    "never": "Vēl nav pārbaudīts",
+    "checked": "pārbaudīti {{count}} ieraksti | {{unchained}} no laika pirms ķēdes | pārbaudīts {{time}}",
+    "head": "Jaunākais ieraksts {{id}} | {{hash}}",
+    "checkNow": "Pārbaudīt tagad",
+    "download": "Lejupielādēt galvu",
+    "paste": "Ielīmēt saglabātu galvu",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Salīdzināt",
+    "badHead": "Tas nav saglabāts galvas ieraksts. Tam ir nepieciešams id un hash.",
+    "headOk": "Saglabātā galva sakrīt, un nekas pēc tās nav mainīts",
+    "headPruned": "Šis ieraksts tika noņemts, jo sasniedza žurnāla izmēra vai vecuma ierobežojumu, tāpēc to vairs nevar salīdzināt",
+    "headMissing": "Saglabātā galva nesakrīt. Žurnāls ir mainīts vai pārrakstīts",
+    "failed": "Tas nestrādāja. Mēģiniet vēlreiz.",
+    "problem": {
+      "row_changed": "ieraksts tika mainīts",
+      "row_missing": "ieraksts tika noņemts vai pievienots",
+      "hash_removed": "ieraksts zaudēja savu hash vērtību",
+      "head_mismatch": "jaunākie ieraksti tika noņemti"
+    }
   }
 }

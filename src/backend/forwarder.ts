@@ -23,6 +23,10 @@ export function forwardPayload(
   entry: PluginAuditEntry,
 ): Record<string, unknown> {
   return {
+    // The chain hash lets the collector keep its own copy of the audit head.
+    id: entry.id ?? null,
+    hash: entry.hash ?? null,
+    prevHash: entry.prevHash ?? null,
     timestamp: entry.timestamp,
     userId: entry.userId,
     username: entry.username,

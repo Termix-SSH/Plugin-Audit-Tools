@@ -31,5 +31,30 @@
     "csv": "Eksporter CSV",
     "ndjson": "Eksporter NDJSON",
     "error": "Kunne ikke eksportere revisjonsloggen."
+  },
+  "integrity": {
+    "title": "Sjekk av revisjonslogg",
+    "intro": "Hver post i revisjonsloggen inneholder en hash av forrige post, slik at en endret eller fjernet post bryter kjeden. Termix sjekker dette hver time og varsler alle administratorer når kjeden brytes. Last ned den nyeste hashen av og til, og oppbevar den et annet sted: senere kan du lime den inn her for å bevise at ingenting før den ble omskrevet.",
+    "ok": "Kjeden er intakt",
+    "broken": "Kjeden er brutt ved post {{id}}",
+    "never": "Ikke sjekket ennå",
+    "checked": "{{count}} post sjekket | {{unchained}} fra før kjeden | sjekket {{time}}",
+    "head": "Nyeste post {{id}} | {{hash}}",
+    "checkNow": "Sjekk nå",
+    "download": "Last ned siste hash",
+    "paste": "Lim inn en lagret hash",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Sammenlign",
+    "badHead": "Dette er ikke en lagret hash. Den må inneholde en id og en hash.",
+    "headOk": "Den lagrede hashen stemmer, og ingenting etter den er endret",
+    "headPruned": "Denne posten ble fjernet på grunn av loggens størrelses- eller aldersgrense, så den kan ikke sammenlignes lenger",
+    "headMissing": "Den lagrede hashen stemmer ikke. Loggen er endret eller omskrevet",
+    "failed": "Det fungerte ikke. Prøv igjen.",
+    "problem": {
+      "row_changed": "en post ble endret",
+      "row_missing": "en post ble fjernet eller lagt til",
+      "hash_removed": "en post mistet hashen sin",
+      "head_mismatch": "de nyeste postene ble fjernet"
+    }
   }
 }

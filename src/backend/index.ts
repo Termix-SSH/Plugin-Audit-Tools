@@ -3,6 +3,7 @@ import type { PluginContext } from "@termix-ssh/plugin-sdk/backend";
 import { createForwarder } from "./forwarder.js";
 import { createRelay } from "./relay.js";
 import { registerRoutes } from "./routes.js";
+import { keepAwake } from "./keep-awake.js";
 
 /** How often a collector that was down is checked for entries it missed. */
 const RETRY_INTERVAL_MS = 30_000;
@@ -16,7 +17,15 @@ export async function activate(ctx: PluginContext) {
   ctx.audit.subscribe((entry) => {
     void relay.onEntry(entry).catch(() => {});
   });
-  ctx.schedule.every(RETRY_INTERVAL_MS, () => relay.retry());
+  keepAwake(ctx, "retry", false);
+  ctx.schedule.every(
+    RETRY_INTERVAL_MS,
+    async () => {
+      await relay.retry();
+      keepAwake(ctx, "retry", relay.isBehind());
+    },
+    { id: "retry" },
+  );
   // Turning forwarding on or changing the collector sends what is waiting.
   ctx.settings.onChange("url", () => void relay.start().catch(() => {}));
   ctx.disposables.add(() => relay.stop());

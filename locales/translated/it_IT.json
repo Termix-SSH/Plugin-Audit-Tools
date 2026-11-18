@@ -31,5 +31,30 @@
     "csv": "Esporta CSV",
     "ndjson": "Esporta NDJSON",
     "error": "Impossibile esportare il registro di controllo."
+  },
+  "integrity": {
+    "title": "Controllo registro di audit",
+    "intro": "Ogni voce del registro di audit contiene l'hash della voce precedente, quindi una voce modificata o rimossa rompe la catena. Termix la verifica ogni ora e avvisa tutti gli amministratori quando si rompe. Scarica l'hash più recente di tanto in tanto e conservalo altrove: in seguito potrai incollarlo qui per dimostrare che nulla prima di quel punto è stato riscritto.",
+    "ok": "La catena è integra",
+    "broken": "La catena è interrotta alla voce {{id}}",
+    "never": "Non ancora verificato",
+    "checked": "verificato {{count}} elemento | {{unchained}} prima della catena | verificato {{time}}",
+    "head": "Voce più recente {{id}} | {{hash}}",
+    "checkNow": "Verifica ora",
+    "download": "Scarica l'hash più recente",
+    "paste": "Incolla un hash salvato",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Confronta",
+    "badHead": "Questo non è un hash salvato. Deve contenere un id e un hash.",
+    "headOk": "L'hash salvato corrisponde e nulla dopo di esso è stato modificato",
+    "headPruned": "Questa voce è stata rimossa a causa del limite di dimensione o età del registro, quindi non può più essere confrontata",
+    "headMissing": "L'hash salvato non corrisponde. Il registro è stato modificato o riscritto",
+    "failed": "L'operazione non è riuscita. Riprova.",
+    "problem": {
+      "row_changed": "una voce è stata modificata",
+      "row_missing": "una voce è stata rimossa o aggiunta",
+      "hash_removed": "una voce ha perso il suo hash",
+      "head_mismatch": "le voci più recenti sono state rimosse"
+    }
   }
 }

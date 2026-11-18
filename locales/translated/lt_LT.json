@@ -31,5 +31,30 @@
     "csv": "Eksportuoti CSV",
     "ndjson": "Eksportuoti NDJSON",
     "error": "Nepavyko eksportuoti audito žurnalo."
+  },
+  "integrity": {
+    "title": "Audito žurnalo patikra",
+    "intro": "Kiekviena audito žurnalo įrašo eilutė turi ankstesniojo įrašo hash reikšmę, todėl pakeitus ar pašalinus įrašą grandinė nutrūksta. Termix patikrina grandinę kas valandą ir praneša visiems administratoriams, jei ji nutrūksta. Periodiškai atsisiųskite naujausią hash reikšmę ir saugokite ją kitur: vėliau galite įklijuoti ją čia, kad įrodytumėte, jog niekas prieš tai nebuvo perrašyta.",
+    "ok": "Grandinė tvarkinga",
+    "broken": "Grandinė nutrūko įraše {{id}}",
+    "never": "Dar nepatikrinta",
+    "checked": "patikrinta {{count}} įrašų | {{unchained}} iš laikotarpio prieš grandinę | patikrinta {{time}}",
+    "head": "Naujausias įrašas {{id}} | {{hash}}",
+    "checkNow": "Patikrinti dabar",
+    "download": "Atsisiųsti naujausią hash",
+    "paste": "Įklijuoti išsaugotą hash",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Palyginti",
+    "badHead": "Tai nėra išsaugotas hash. Jame turi būti id ir hash.",
+    "headOk": "Išsaugotas hash atitinka, ir niekas po jo nebuvo pakeista",
+    "headPruned": "Šis įrašas buvo pašalintas dėl žurnalo dydžio ar amžiaus apribojimo, todėl jo daugiau negalima palyginti",
+    "headMissing": "Išsaugotas hash neatitinka. Žurnalas buvo pakeistas arba perrašytas",
+    "failed": "Tai nepavyko. Bandykite dar kartą.",
+    "problem": {
+      "row_changed": "įrašas buvo pakeistas",
+      "row_missing": "įrašas buvo pašalintas arba pridėtas",
+      "hash_removed": "įrašas prarado savo hash",
+      "head_mismatch": "naujausi įrašai buvo pašalinti"
+    }
   }
 }

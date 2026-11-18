@@ -102,4 +102,106 @@ export function registerRoutes(router: Router, ctx: PluginContext): void {
       res.end();
     }
   });
+
+  /**
+   * @openapi
+   * /plugin-api/audit-tools/chain:
+   *   get:
+   *     summary: Last audit log check
+   *     description: Core's last hourly check of the audit log's hash chain, or null before the first one. Needs the export permission.
+   *     tags:
+   *       - Audit Tools
+   *     responses:
+   *       200:
+   *         description: The last check.
+   *       403:
+   *         description: Not allowed.
+   */
+  router.get("/chain", async (_req: Request, res: Response) => {
+    try {
+      res.json({ result: await ctx.audit.chain.status() });
+    } catch (error) {
+      ctx.log.error("Failed to read the audit log check", error);
+      res.status(500).json({ error: "Failed to read the audit log check" });
+    }
+  });
+
+  /**
+   * @openapi
+   * /plugin-api/audit-tools/chain/verify:
+   *   post:
+   *     summary: Check the audit log now
+   *     description: Walks the whole hash chain and returns the result with the newest head.
+   *     tags:
+   *       - Audit Tools
+   *     responses:
+   *       200:
+   *         description: The check result.
+   *       403:
+   *         description: Not allowed.
+   */
+  router.post("/chain/verify", async (_req: Request, res: Response) => {
+    try {
+      res.json({ result: await ctx.audit.chain.verify() });
+    } catch (error) {
+      ctx.log.error("Failed to check the audit log", error);
+      res.status(500).json({ error: "Failed to check the audit log" });
+    }
+  });
+
+  /**
+   * @openapi
+   * /plugin-api/audit-tools/chain/check-head:
+   *   post:
+   *     summary: Compare a saved head
+   *     description: Says whether a head saved earlier still matches the audit log and the chain after it holds.
+   *     tags:
+   *       - Audit Tools
+   *     requestBody:
+   *       required: true
+   *       content:
+   *         application/json:
+   *           schema:
+   *             type: object
+   *             required: [id, hash]
+   *             properties:
+   *               id: { type: integer }
+   *               hash: { type: string }
+   *     responses:
+   *       200:
+   *         description: The comparison.
+   *       400:
+   *         description: Not a head.
+   *       403:
+   *         description: Not allowed.
+   */
+  router.post("/chain/check-head", async (req: Request, res: Response) => {
+    const head = parseHead(req.body);
+    if (!head) {
+      res.status(400).json({ error: "A head needs an id and a hash" });
+      return;
+    }
+    try {
+      res.json({ result: await ctx.audit.chain.checkHead(head) });
+    } catch (error) {
+      ctx.log.error("Failed to compare the saved head", error);
+      res.status(500).json({ error: "Failed to compare the saved head" });
+    }
+  });
+}
+
+/** A saved head as pasted: { id, hash }, extra fields ignored. */
+export function parseHead(body: unknown): { id: number; hash: string } | null {
+  const value = body as { id?: unknown; hash?: unknown } | null;
+  if (
+    !value ||
+    typeof value.id !== "number" ||
+    !Number.isInteger(value.id) ||
+    value.id < 1 ||
+    typeof value.hash !== "string" ||
+    !/^[0-9a-f]{64}$/.test(value.hash)
+  ) {
+    return null;
+  }
+  return { id: value.id, hash: value.hash };
 }

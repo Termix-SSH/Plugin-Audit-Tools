@@ -30,6 +30,8 @@ Read the [docs](https://docs.termix.site/plugins/audit-tools) to set it up and u
 - Catch up on entries written while the collector or Termix was down
 - Export the audit log as CSV or NDJSON with the same filters as the viewer
 - Spreadsheet formula guard on CSV export
+- Check the audit log's hash chain, download its newest hash to keep elsewhere and compare it later
+- Forwarded and exported entries carry their chain hash
 - An alert to admins when forwarding fails and when it recovers
 
 <br />

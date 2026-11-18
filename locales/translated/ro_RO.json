@@ -31,5 +31,30 @@
     "csv": "Exportă CSV",
     "ndjson": "Exportă NDJSON",
     "error": "Nu s-a putut exporta jurnalul de audit."
+  },
+  "integrity": {
+    "title": "Verificare jurnal de audit",
+    "intro": "Fiecare intrare din jurnalul de audit conține un hash al celei anterioare, astfel încât o intrare modificată sau ștearsă rupe lanțul. Termix verifică acest lucru la fiecare oră și notifică toți administratorii când lanțul este rupt. Descărcați cel mai recent hash din când în când și păstrați-l într-un loc sigur: mai târziu îl puteți lipi aici pentru a dovedi că nimic dinainte nu a fost rescris.",
+    "ok": "Lanțul este intact",
+    "broken": "Lanțul este rupt la intrarea {{id}}",
+    "never": "Nu a fost verificat încă",
+    "checked": "am verificat {{count}} intrări | {{unchained}} dinaintea lanțului | verificate la {{time}}",
+    "head": "Cea mai recentă intrare {{id}} | {{hash}}",
+    "checkNow": "Verifică acum",
+    "download": "Descarcă capul",
+    "paste": "Lipește un cap salvat",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Compară",
+    "badHead": "Acesta nu este un cap salvat. Are nevoie de un id și un hash.",
+    "headOk": "Capul salvat se potrivește și nimic după el nu a fost modificat",
+    "headPruned": "Această intrare a fost ștearsă din cauza limitei de dimensiune sau vechime a jurnalului, așa că nu mai poate fi comparată",
+    "headMissing": "Capul salvat nu se potrivește. Jurnalul a fost modificat sau rescris",
+    "failed": "Acest lucru nu a funcționat. Încercați din nou.",
+    "problem": {
+      "row_changed": "o intrare a fost modificată",
+      "row_missing": "o intrare a fost ștearsă sau adăugată",
+      "hash_removed": "o intrare și-a pierdut hash-ul",
+      "head_mismatch": "cele mai recente intrări au fost șterse"
+    }
   }
 }

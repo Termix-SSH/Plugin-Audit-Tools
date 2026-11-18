@@ -31,5 +31,29 @@
     "csv": "Exportar CSV",
     "ndjson": "Exportar NDJSON",
     "error": "No se ha podido exportar el registro de auditoría."
+  },
+  "integrity": {
+    "title": "Comprobación del registro de auditoría",
+    "intro": "Cada entrada del registro de auditoría contiene el hash de la anterior, por lo que si se modifica o elimina una entrada, se rompe la cadena. Termix la comprueba cada hora y alerta a todos los administradores cuando se rompe. Descarga el hash más reciente de vez en cuando y guárdalo en otro lugar: más adelante podrás pegarlo aquí para demostrar que nada anterior fue reescrito.",
+    "ok": "La cadena es válida",
+    "broken": "La cadena está rota en la entrada {{id}}",
+    "never": "Aún no se ha comprobado",
+    "head": "Entrada más reciente {{id}} | {{hash}}",
+    "checkNow": "Comprobar ahora",
+    "download": "Descargar cabecera",
+    "paste": "Pegar una cabecera guardada",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Comparar",
+    "badHead": "Esto no es una cabecera guardada. Necesita un id y un hash.",
+    "headOk": "La cabecera guardada coincide y nada después de ella ha sido modificado",
+    "headPruned": "Esa entrada fue eliminada por el límite de tamaño o antigüedad del registro, por lo que ya no se puede comparar",
+    "headMissing": "La cabecera guardada no coincide. El registro fue modificado o reescrito",
+    "failed": "Eso no funcionó. Inténtalo de nuevo.",
+    "problem": {
+      "row_changed": "una entrada fue modificada",
+      "row_missing": "una entrada fue eliminada o añadida",
+      "hash_removed": "una entrada perdió su hash",
+      "head_mismatch": "las entradas más recientes fueron eliminadas"
+    }
   }
 }

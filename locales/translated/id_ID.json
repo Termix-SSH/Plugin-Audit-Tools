@@ -31,5 +31,30 @@
     "csv": "Ekspor CSV",
     "ndjson": "Ekspor NDJSON",
     "error": "Tidak dapat mengekspor log audit."
+  },
+  "integrity": {
+    "title": "Audit log check",
+    "intro": "Setiap entri log audit membawa hash dari entri sebelumnya, sehingga entri yang diubah atau dihapus akan memutus rantai. Termix memeriksa ini setiap jam dan memberi tahu setiap admin saat rantai terputus. Unduh hash terbaru sesekali dan simpan di tempat lain: nanti Anda bisa menempelkannya di sini untuk membuktikan bahwa tidak ada yang diubah sebelum ditulis ulang.",
+    "ok": "Rantai utuh",
+    "broken": "Rantai terputus pada entri {{id}}",
+    "never": "Belum diperiksa",
+    "checked": "{{count}} entri diperiksa | {{unchained}} dari sebelum rantai | diperiksa {{time}}",
+    "head": "Entri terbaru {{id}} | {{hash}}",
+    "checkNow": "Periksa sekarang",
+    "download": "Unduh head",
+    "paste": "Tempel head yang disimpan",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Bandingkan",
+    "badHead": "Bukan head yang disimpan. Diperlukan id dan hash.",
+    "headOk": "Head yang disimpan cocok dan tidak ada yang diubah setelahnya",
+    "headPruned": "Entri tersebut dihapus karena batas ukuran atau usia log, sehingga tidak dapat dibandingkan lagi",
+    "headMissing": "Head yang disimpan tidak cocok. Log telah diubah atau ditulis ulang",
+    "failed": "Itu tidak berhasil. Coba lagi.",
+    "problem": {
+      "row_changed": "sebuah entri diubah",
+      "row_missing": "sebuah entri dihapus atau ditambahkan",
+      "hash_removed": "sebuah entri kehilangan hash-nya",
+      "head_mismatch": "entri terbaru dihapus"
+    }
   }
 }

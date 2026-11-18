@@ -31,5 +31,30 @@
     "csv": "Export CSV",
     "ndjson": "Export NDJSON",
     "error": "Could not export the audit log."
+  },
+  "integrity": {
+    "title": "Audit log check",
+    "intro": "Each audit log entry carries a hash of the one before, so a changed or removed entry breaks the chain. Termix checks it every hour and alerts every admin when it breaks. Download the newest hash now and then and keep it somewhere else: later you can paste it here to prove nothing before it was rewritten.",
+    "ok": "The chain holds",
+    "broken": "The chain is broken at entry {{id}}",
+    "never": "Not checked yet",
+    "checked": "{{count}} entries checked | {{unchained}} from before the chain | checked {{time}}",
+    "head": "Newest entry {{id}} | {{hash}}",
+    "checkNow": "Check now",
+    "download": "Download head",
+    "paste": "Paste a saved head",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Compare",
+    "badHead": "That is not a saved head. It needs an id and a hash.",
+    "headOk": "The saved head matches and nothing after it was changed",
+    "headPruned": "That entry was removed by the log's size or age limit, so it can't be compared any more",
+    "headMissing": "The saved head does not match. The log was changed or rewritten",
+    "failed": "That did not work. Try again.",
+    "problem": {
+      "row_changed": "an entry was changed",
+      "row_missing": "an entry was removed or added",
+      "hash_removed": "an entry lost its hash",
+      "head_mismatch": "the newest entries were removed"
+    }
   }
 }

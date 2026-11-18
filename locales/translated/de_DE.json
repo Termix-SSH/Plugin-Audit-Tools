@@ -31,5 +31,29 @@
     "csv": "CSV exportieren",
     "ndjson": "NDJSON exportieren",
     "error": "Das Audit-Protokoll konnte nicht exportiert werden."
+  },
+  "integrity": {
+    "title": "Prüfung des Audit-Logs",
+    "intro": "Jeder Eintrag im Audit-Log enthält einen Hash des vorherigen Eintrags. Wird ein Eintrag geändert oder entfernt, wird die Kette unterbrochen. Termix prüft dies stündlich und benachrichtigt alle Administratoren bei einer Unterbrechung. Laden Sie den neuesten Hash von Zeit zu Zeit herunter und bewahren Sie ihn an einem anderen Ort auf: Später können Sie ihn hier einfügen, um nachzuweisen, dass nichts vor ihm geändert wurde.",
+    "ok": "Die Kette ist intakt",
+    "broken": "Die Kette ist bei Eintrag {{id}} unterbrochen",
+    "never": "Noch nicht geprüft",
+    "head": "Neuester Eintrag {{id}} | {{hash}}",
+    "checkNow": "Jetzt prüfen",
+    "download": "Neuesten Hash herunterladen",
+    "paste": "Gespeicherten Hash einfügen",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Vergleichen",
+    "badHead": "Das ist kein gespeicherter Hash. Er benötigt eine ID und einen Hash.",
+    "headOk": "Der gespeicherte Hash stimmt überein und nichts danach wurde geändert",
+    "headPruned": "Dieser Eintrag wurde aufgrund der Größen- oder Altersbegrenzung des Logs entfernt und kann nicht mehr verglichen werden",
+    "headMissing": "Der gespeicherte Hash stimmt nicht überein. Das Log wurde geändert oder überschrieben",
+    "failed": "Das hat nicht funktioniert. Versuchen Sie es erneut.",
+    "problem": {
+      "row_changed": "ein Eintrag wurde geändert",
+      "row_missing": "ein Eintrag wurde entfernt oder hinzugefügt",
+      "hash_removed": "ein Eintrag hat seinen Hash verloren",
+      "head_mismatch": "die neuesten Einträge wurden entfernt"
+    }
   }
 }

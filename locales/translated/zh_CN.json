@@ -31,5 +31,30 @@
     "csv": "导出 CSV",
     "ndjson": "导出 NDJSON",
     "error": "无法导出审计日志。"
+  },
+  "integrity": {
+    "title": "审计日志检查",
+    "intro": "每条审计日志条目都包含前一条目的哈希值，因此任何条目的修改或删除都会破坏链条。Termix 每小时检查一次，并在链条断裂时通知所有管理员。请定期下载最新的哈希值并保存在其他位置：稍后您可以将其粘贴到这里，以证明在此之前的日志未被篡改。",
+    "ok": "链条完整",
+    "broken": "链条在条目 {{id}} 处断裂",
+    "never": "尚未检查",
+    "checked": "已检查 {{count}} 条条目 | {{unchained}} 条来自链条建立之前 | 检查时间 {{time}}",
+    "head": "最新条目 {{id}} | {{hash}}",
+    "checkNow": "立即检查",
+    "download": "下载最新哈希",
+    "paste": "粘贴已保存的哈希",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "比较",
+    "badHead": "这不是有效的已保存哈希。它需要包含 id 和 hash。",
+    "headOk": "已保存的哈希匹配，且之后的日志未被更改",
+    "headPruned": "该条目因日志的大小或保留期限限制已被移除，因此无法再进行比较",
+    "headMissing": "已保存的哈希不匹配。日志已被更改或重写",
+    "failed": "操作失败。请重试。",
+    "problem": {
+      "row_changed": "一条条目被修改",
+      "row_missing": "一条条目被移除或添加",
+      "hash_removed": "一条条目丢失了哈希值",
+      "head_mismatch": "最新条目被移除"
+    }
   }
 }

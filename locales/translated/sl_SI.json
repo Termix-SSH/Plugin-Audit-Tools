@@ -31,5 +31,30 @@
     "csv": "Izvozi CSV",
     "ndjson": "Izvozi NDJSON",
     "error": "Dnevnika pregleda ni bilo mogoče izvoziti."
+  },
+  "integrity": {
+    "title": "Preverjanje dnevnika pregleda",
+    "intro": "Vsak vnos v dnevniku pregleda vsebuje hash prejšnjega vnosa, zato sprememba ali odstranitev vnosa prekine verigo. Termix jo preverja vsako uro in ob prekinitvi obvesti vse skrbnike. Občasno prenesite najnovejši hash in ga shranite drugje: kasneje ga lahko prilepite sem, da dokazujete, da pred njim ni bilo ničesar spremenjenega.",
+    "ok": "Veriga je nedotaknjena",
+    "broken": "Veriga je prekinjena pri vnosu {{id}}",
+    "never": "Še ni bilo preverjeno",
+    "checked": "preverjenih je bilo {{count}} vnosov | {{unchained}} izpred verige | preverjeno ob {{time}}",
+    "head": "Najnovejši vnos {{id}} | {{hash}}",
+    "checkNow": "Preveri zdaj",
+    "download": "Prenesi vrh",
+    "paste": "Prilepi shranjen vrh",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Primerjaj",
+    "badHead": "To ni shranjen vrh. Potrebuje id in hash.",
+    "headOk": "Shranjeni vrh se ujema in ničesar za njim ni bilo spremenjenega",
+    "headPruned": "Ta vnos je bil odstranjen zaradi omejitve velikosti ali starosti dnevnika, zato ga ni mogoče več primerjati",
+    "headMissing": "Shranjeni vrh se ne ujema. Dnevnik je bil spremenjen ali prepisan",
+    "failed": "To ni delovalo. Poskusite znova.",
+    "problem": {
+      "row_changed": "vnos je bil spremenjen",
+      "row_missing": "vnos je bil odstranjen ali dodan",
+      "hash_removed": "vnos je izgubil svoj hash",
+      "head_mismatch": "najnovejši vnosi so bili odstranjeni"
+    }
   }
 }

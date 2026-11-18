@@ -31,5 +31,29 @@
     "csv": "Exporter en CSV",
     "ndjson": "Exporter en NDJSON",
     "error": "Impossible d'exporter le journal d'audit."
+  },
+  "integrity": {
+    "title": "Vérification du journal d'audit",
+    "intro": "Chaque entrée du journal d'audit contient le hachage de l'entrée précédente, de sorte qu'une entrée modifiée ou supprimée brise la chaîne. Termix la vérifie chaque heure et alerte tous les administrateurs en cas de rupture. Téléchargez régulièrement le dernier hachage et conservez-le ailleurs : vous pourrez ensuite le coller ici pour prouver qu'aucune modification n'a eu lieu avant cette date.",
+    "ok": "La chaîne est intacte",
+    "broken": "La chaîne est rompue à l'entrée {{id}}",
+    "never": "Aucune vérification effectuée",
+    "head": "Dernière entrée {{id}} | {{hash}}",
+    "checkNow": "Vérifier maintenant",
+    "download": "Télécharger le dernier hachage",
+    "paste": "Coller un dernier hachage sauvegardé",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Comparer",
+    "badHead": "Ceci n'est pas un dernier hachage sauvegardé. Il doit contenir un id et un hash.",
+    "headOk": "Le dernier hachage sauvegardé correspond et aucune modification n'a été apportée depuis",
+    "headPruned": "Cette entrée a été supprimée en raison de la limite de taille ou d'âge du journal, elle ne peut donc plus être comparée",
+    "headMissing": "Le dernier hachage sauvegardé ne correspond pas. Le journal a été modifié ou réécrit",
+    "failed": "Échec de l'opération. Veuillez réessayer.",
+    "problem": {
+      "row_changed": "une entrée a été modifiée",
+      "row_missing": "une entrée a été supprimée ou ajoutée",
+      "hash_removed": "une entrée a perdu son hachage",
+      "head_mismatch": "les dernières entrées ont été supprimées"
+    }
   }
 }

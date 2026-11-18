@@ -31,5 +31,30 @@
     "csv": "Exportovať CSV",
     "ndjson": "Exportovať NDJSON",
     "error": "Nepodarilo sa exportovať auditný záznam."
+  },
+  "integrity": {
+    "title": "Kontrola auditného denníka",
+    "intro": "Každý záznam v auditnom denníku obsahuje hash predchádzajúceho záznamu, takže zmena alebo odstránenie záznamu preruší reťazec. Termix ho kontroluje každú hodinu a upozorní všetkých správcov, ak dôjde k prerušeniu. Občas si stiahnite najnovší hash a uschovajte ho inde: neskôr ho môžete prilepiť sem, aby ste dokázali, že nič pred ním nebolo prepísané.",
+    "ok": "Reťazec je v poriadku",
+    "broken": "Reťazec je prerušený pri zázname {{id}}",
+    "never": "Zatiaľ nekontrolované",
+    "checked": "overifíkovaných {{count}} záznamov | {{unchained}} z pred reťazcom | overené {{time}}",
+    "head": "Najnovší záznam {{id}} | {{hash}}",
+    "checkNow": "Skontrolovať teraz",
+    "download": "Stiahnuť aktuálny stav",
+    "paste": "Prilepiť uložený stav",
+    "pastePlaceholder": "{\"id\": 123, \"hash\": \"...\"}",
+    "compare": "Porovnať",
+    "badHead": "Toto nie je uložený stav. Vyžaduje sa id a hash.",
+    "headOk": "Uložený stav zodpovedá a nič po ňom nebolo zmenené",
+    "headPruned": "Tento záznam bol odstránený kvôli limitu veľkosti alebo veku denníka, takže už ho nie je možné porovnať",
+    "headMissing": "Uložený stav nezodpovedá. Denník bol zmenený alebo prepísaný",
+    "failed": "To nefungovalo. Skúste to znova.",
+    "problem": {
+      "row_changed": "záznam bol zmenený",
+      "row_missing": "záznam bol odstránený alebo pridaný",
+      "hash_removed": "záznam stratil svoj hash",
+      "head_mismatch": "najnovšie záznamy boli odstránené"
+    }
   }
 }
